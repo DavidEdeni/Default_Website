@@ -1,50 +1,61 @@
 import React from 'react';
-import { Box, Container, Typography, List, ListItem, ListItemText, Paper, Divider } from '@mui/material';
+import { Box, Container, Typography, Stack, Paper, Divider, List, ListItem, ListItemText } from '@mui/material';
 
 const FeesPage = () => {
   return (
     <Box sx={{ py: 8, bgcolor: 'background.default' }}>
       <Container maxWidth="md">
-        <Typography variant="h1" gutterBottom>Fees & Payment</Typography>
-        <Paper elevation={0} sx={{ p: 6, border: '1px solid #E0D8D0', bgcolor: 'background.paper' }}>
-          <Box component="section" sx={{ mb: 6 }}>
-            <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>Supervision Fees</Typography>
-            <List>
-              {[
-                { primary: "Supervision Fit Consult (45–60 min)", secondary: "Fee provided upon email inquiry." },
-                { primary: "Ongoing Supervision (Weekly/Bi-weekly)", secondary: "Fee provided upon email inquiry." }
-              ].map((item, idx) => (
-                <ListItem key={idx} disableGutters sx={{ alignItems: 'flex-start', py: 1 }}>
-                  <ListItemText 
-                    primary={<Typography variant="h6" sx={{ fontSize: '1.1rem', fontWeight: 600 }}>{item.primary}</Typography>}
-                    secondary={<Typography variant="body1" color="text.secondary">{item.secondary}</Typography>}
-                  />
-                </ListItem>
-              ))}
-            </List>
-          </Box>
-          <Box component="section" sx={{ mb: 6 }}>
-            <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>Therapy Fees</Typography>
-            <Typography variant="body1" color="text.secondary">
-              Therapy services are provided on a private-pay basis. Current rates are available upon inquiry.
-            </Typography>
-          </Box>
-          <Box component="section" sx={{ mb: 6, p: 4, bgcolor: 'background.default', borderLeft: '4px solid #2C2520' }}>
-            <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>Insurance & Superbills</Typography>
-            <Typography variant="body1" color="text.secondary">
-              I do not accept insurance directly. For therapy services, superbills are provided upon request. Reimbursement is determined by your insurer and is not guaranteed. Supervision is not an insurance-reimbursable service.
-            </Typography>
-          </Box>
-          <Box component="section">
-            <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>Methods for Payment</Typography>
-            <Typography variant="body1" color="text.secondary">
-              Secure electronic payment is required at the time of service. Detailed payment instructions are provided during the orientation or fit consult.
-            </Typography>
-          </Box>
+        <Typography variant="h1" gutterBottom sx={{ mb: 6, fontSize: { xs: '2.5rem', md: '3.5rem' } }}>
+          Fees
+        </Typography>
+
+        <Paper elevation={0} sx={{ p: { xs: 4, md: 8 }, border: '1px solid #E0D8D0', bgcolor: 'background.paper' }}>
+          
+          <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', mb: 6 }}>
+            All services are privately paid. Superbills are available upon request; reimbursement depends on your insurer and is not guaranteed.
+          </Typography>
+
+          <Divider sx={{ mb: 6 }} />
+
+          <Section title="Supervision">
+            <Stack spacing={4}>
+              <Box>
+                <Typography variant="h6" sx={{ fontWeight: 600 }}>Supervision Fit Consult (45–60 minutes)</Typography>
+                <Typography variant="body1" color="primary.main" sx={{ fontWeight: 600 }}>Fee: $150 (launch rate)</Typography>
+              </Box>
+              <Box>
+                <Typography variant="h6" sx={{ fontWeight: 600 }}>Ongoing Supervision (50 minutes)</Typography>
+                <Typography variant="body1" color="primary.main" sx={{ fontWeight: 600 }}>Fee: $140 per session (launch rate; rate-locked for 12 months for active supervisees)</Typography>
+              </Box>
+            </Stack>
+          </Section>
+
+          <Divider sx={{ my: 6 }} />
+
+          <Section title="Consulting">
+            <Stack spacing={4}>
+              <Box>
+                <Typography variant="h6" sx={{ fontWeight: 600 }}>Consulting Session (75–90 minutes)</Typography>
+                <Typography variant="body1" color="primary.main" sx={{ fontWeight: 600 }}>Fee: $225 (launch rate)</Typography>
+              </Box>
+              <Box>
+                <Typography variant="h6" sx={{ fontWeight: 600 }}>Short Series (3–6 sessions)</Typography>
+                <Typography variant="body1" color="primary.main" sx={{ fontWeight: 600 }}>Fee: $225 per session (75–90 minutes; scheduled by agreement)</Typography>
+              </Box>
+            </Stack>
+          </Section>
+
         </Paper>
       </Container>
     </Box>
   );
 };
+
+const Section = ({ title, children }) => (
+  <Box component="section" sx={{ mb: 0 }}>
+    <Typography variant="h2" gutterBottom sx={{ fontSize: '2rem', fontWeight: 600, mb: 4 }}>{title}</Typography>
+    {children}
+  </Box>
+);
 
 export default FeesPage;

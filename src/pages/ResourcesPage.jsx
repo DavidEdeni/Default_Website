@@ -1,79 +1,142 @@
 import React from 'react';
-import { Box, Container, Typography, Grid, Paper, Link, Stack, Divider } from '@mui/material';
-import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import { Box, Container, Typography, Stack, Paper, Divider, List, ListItem, ListItemText, Link, Button } from '@mui/material';
 
 const ResourcesPage = () => {
-  const resources = [
-    { title: "Accountability Map", description: "A framework for navigating role clarity and responsibility under pressure.", link: "/assets/accountability-map.pdf" },
-    { title: "Repair-Labor Audit", description: "Tools for evaluating high-stakes rupture patterns and follow-through.", link: "/assets/repair-labor-audit.pdf" }
-  ];
-
   return (
-    <Box sx={{ py: 12, bgcolor: 'background.default' }}>
+    <Box sx={{ py: 8, bgcolor: 'background.default' }}>
       <Container maxWidth="md">
-        <Typography variant="h1" gutterBottom sx={{ mb: 6 }}>
-          Resource Library
+        <Typography variant="h1" gutterBottom sx={{ mb: 1, fontSize: { xs: '2.5rem', md: '3.5rem' } }}>
+          Resources
         </Typography>
-        <Typography variant="body1" paragraph sx={{ mb: 8 }}>
-          A selection of tools and frameworks for clinicians and clients navigating complex relational dynamics and high-stakes decisions.
+        <Typography variant="h5" color="secondary.light" gutterBottom sx={{ mb: 6, fontWeight: 600 }}>
+          Clarity without coercion.
         </Typography>
 
-        <Grid container spacing={4}>
-          {resources.map((res, idx) => (
-            <Grid item xs={12} key={idx}>
-              <Paper
-                elevation={0}
-                sx={{
-                  p: 4,
-                  border: '1px solid #E0D8D0',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  gap: 4,
-                  transition: 'background-color 0.2s ease',
-                  '&:hover': { bgcolor: 'rgba(0,0,0,0.02)' }
-                }}
-              >
-                <Box>
-                  <Typography variant="h3" sx={{ fontSize: '1.5rem', mb: 1 }}>
-                    {res.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {res.description}
-                  </Typography>
-                </Box>
-                <Link
-                  href={res.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 1,
-                    fontWeight: 600,
-                    textTransform: 'uppercase',
-                    fontSize: '0.8rem',
-                    color: 'primary.main',
-                    textDecoration: 'none',
-                    borderBottom: '1px solid currentColor',
-                    pb: 0.5
-                  }}
-                >
-                  <PictureAsPdfIcon fontSize="small" /> Download PDF
-                </Link>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
-        
-        <Divider sx={{ my: 8 }} />
-        
-        <Typography variant="body2" color="text.secondary" align="center">
-          More resources coming in late 2026.
-        </Typography>
+        <Paper elevation={0} sx={{ p: { xs: 4, md: 8 }, border: '1px solid #E0D8D0', bgcolor: 'background.paper' }}>
+          
+          <Box sx={{ mb: 8 }}>
+            <Typography variant="h3" gutterBottom sx={{ fontSize: '1.75rem', fontWeight: 600 }}>
+              IRD Framework Library
+            </Typography>
+            <Typography variant="body1" paragraph color="text.secondary">
+              Selected Integrated Relational Dynamics (IRD) resources for reflection and professional dialogue. IRD offers a conceptual lens for clarifying responsibility, cost, and relational context. It is not a treatment model, diagnostic framework, or scoring system.
+            </Typography>
+             <Box sx={{ p: 2, bgcolor: '#F9F7F5', borderLeft: '3px solid #6D5D50', mb: 4 }}>
+              <Typography variant="body2" color="text.primary">
+                <strong>Use boundary:</strong> First-person use. Not evaluative. Not for diagnosing or targeting others.
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ mt: 1, fontStyle: 'italic' }}>
+                Pre-defense note: Some documents are shared as working drafts for professional dialogue and are subject to revision.
+              </Typography>
+            </Box>
+          </Box>
+
+          <ResourceSection title="Foundations (Open Access)">
+            <ResourceLink label="Relational Accountability — Public Definition (v1.0)" />
+            <ResourceLink label="Accountability Conditions & Collapse Mapping (Agency–Cost–Exposure)" shade />
+          </ResourceSection>
+
+          <ResourceSection title="Conceptual Distinctions (Open Access)">
+            <ResourceLink label="Accountability Isn’t the Same As… (Three Tables) (v1.6)" />
+          </ResourceSection>
+
+          <ResourceSection title="IRD Clarity Guides (Open Access)">
+            <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+              Brief reflection guides for first-person clarity and supervision dialogue when responsibility feels costly or constrained. Not diagnostic. Not evaluative. Not scorecards.
+            </Typography>
+            <List dense>
+              {[
+                "Accountability Map",
+                "Cost Clarity Inventory",
+                "Exposure Location Check",
+                "Repair-Labor Audit",
+                "Refusal Viability Check"
+              ].map((item, idx) => (
+                <ListItem key={idx} disableGutters sx={{ py: 0.5 }}>
+                   <ListItemText primary={<Typography variant="body1" sx={{ fontWeight: 600 }}>&bull; {item} &mdash; <Link href="#" sx={{ fontWeight: 400, fontSize: '0.85rem' }}>View PDF</Link></Typography>} />
+                </ListItem>
+              ))}
+            </List>
+          </ResourceSection>
+
+          <ResourceSection title="Institutional Accountability (Working Drafts — Request-only)">
+            <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+              Shared for professional dialogue. Not for reposting or distribution.
+            </Typography>
+            <Stack spacing={3}>
+              <RequestItem 
+                title="IRD Institutional Accountability Model (Working Draft)" 
+                code="IRD-IAM-0.9" 
+              />
+              <RequestItem 
+                title="Institutional Cost Redistribution Typology (Working Draft)" 
+                code="IRD-ICRT-0.9" 
+              />
+              <RequestItem 
+                title="Relational Exposure Displacement Typology (Working Draft)" 
+                code="IRD-REDT-0.9" 
+              />
+            </Stack>
+          </ResourceSection>
+
+          <ResourceSection title="Working Manuscripts (in preparation) — titles only">
+            <List dense sx={{ fontStyle: 'italic' }}>
+              {[
+                "Relational accountability without control: An integrative ethical framework for preserving agency under cost (2026, in preparation)",
+                "Accountability without control: Why modern systems simulate responsibility and fracture trust (2026, in preparation)",
+                "Accountability without control: The cross, belief, and cost-bearing obedience in Christian ethics (2026, in preparation)"
+              ].map((item, idx) => (
+                <ListItem key={idx} disableGutters>
+                  <ListItemText primary={<Typography variant="body2" color="text.secondary">&bull; {item}</Typography>} />
+                </ListItem>
+              ))}
+            </List>
+            <Typography variant="body2" sx={{ mt: 2, color: 'text.secondary' }}>
+              Available upon request for professional dialogue. Working documents subject to revision.
+            </Typography>
+          </ResourceSection>
+
+          <Divider sx={{ my: 8 }} />
+
+          <Typography variant="body2" align="center" color="text.secondary" sx={{ fontStyle: 'italic' }}>
+            Communication boundary: Please do not include PHI or identifying client details by email. Email is not monitored for emergencies.
+          </Typography>
+
+        </Paper>
       </Container>
     </Box>
   );
 };
+
+const ResourceSection = ({ title, children }) => (
+  <Box sx={{ mb: 8 }}>
+    <Typography variant="h4" gutterBottom sx={{ fontSize: '1.25rem', fontWeight: 600, mb: 3, borderBottom: '1px solid #E0D8D0', pb: 1 }}>
+      {title}
+    </Typography>
+    {children}
+  </Box>
+);
+
+const ResourceLink = ({ label, shade = false }) => (
+  <Box sx={{ py: 2, px: shade ? 2 : 0, bgcolor: shade ? '#F9F7F5' : 'transparent', borderBottom: '1px solid #F0F0F0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+     <Typography variant="body1" sx={{ fontWeight: 600 }}>{label}</Typography>
+     <Link href="#" sx={{ fontSize: '0.85rem', fontWeight: 600 }}>View PDF &rarr;</Link>
+  </Box>
+);
+
+const RequestItem = ({ title, code }) => (
+  <Box sx={{ p: 3, border: '1px solid #F0F0F0', bgcolor: '#FCFAFA' }}>
+    <Typography variant="body1" sx={{ fontWeight: 600, mb: 1 }}>{title}</Typography>
+    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <Typography variant="caption" sx={{ color: 'text.secondary' }}>({code})</Typography>
+      <Link 
+        href={`mailto:integrated.relational.dynamics@gmail.com?subject=Request for Draft: ${code}`}
+        sx={{ fontSize: '0.85rem', fontWeight: 600 }}
+      >
+        Request by email &rarr;
+      </Link>
+    </Box>
+  </Box>
+);
 
 export default ResourcesPage;

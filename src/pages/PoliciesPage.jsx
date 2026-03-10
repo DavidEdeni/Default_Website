@@ -1,46 +1,54 @@
 import React from 'react';
-import { Box, Container, Typography, List, ListItem, ListItemText, Paper, Divider } from '@mui/material';
+import { Box, Container, Typography, Stack, Paper, Divider, List, ListItem, ListItemText } from '@mui/material';
 
 const PoliciesPage = () => {
   return (
     <Box sx={{ py: 8, bgcolor: 'background.default' }}>
       <Container maxWidth="md">
-        <Typography variant="h1" gutterBottom>Policies</Typography>
-        <Paper elevation={0} sx={{ p: 6, border: '1px solid #E0D8D0', bgcolor: 'background.paper' }}>
-          <Box component="section" sx={{ mb: 6 }}>
-            <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>Communication Boundaries</Typography>
+        <Typography variant="h1" gutterBottom sx={{ mb: 6, fontSize: { xs: '2.5rem', md: '3.5rem' } }}>
+          Policies (Supervision)
+        </Typography>
+
+        <Paper elevation={0} sx={{ p: { xs: 4, md: 8 }, border: '1px solid #E0D8D0', bgcolor: 'background.paper' }}>
+          
+          <Section title="Communication">
             <Typography variant="body1" color="text.secondary">
-              Email is the primary method for non-clinical inquiries. I aim to respond within 48–72 business hours. No clinical consultation or crisis support is provided via email.
+              Email is the primary method of communication. The usual response time is 1–2 business days. Email is not checked for emergencies.
             </Typography>
-          </Box>
-          <Box component="section" sx={{ mb: 6 }}>
-            <Typography variant="h5" gutterBottom sx={{ fontWeight: 600, color: '#B71C1C' }}>Crisis & Emergency Disclaimer</Typography>
+          </Section>
+
+          <Section title="Scheduling">
             <Typography variant="body1" color="text.secondary">
-              Integrated Relational Dynamics, PLLC does not provide crisis or emergency services. If you are experiencing a mental health emergency, please contact 988, call 911, or go to the nearest emergency room.
+              Telehealth services are available by appointment only. If you're late, the session will end at the scheduled time.
             </Typography>
-          </Box>
-          <Box component="section" sx={{ mb: 6 }}>
-            <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>Telehealth Boundaries</Typography>
+          </Section>
+
+          <Section title="Cancellation / Reschedule">
+            <Typography variant="body1" color="text.secondary" paragraph>
+              Please give 24 hours’ notice to cancel or reschedule. Late cancellations or missed appointments may be subject to the full fee.
+            </Typography>
+            <Typography variant="body2" sx={{ fontStyle: 'italic', fontWeight: 600 }}>
+              (This protects the work and the schedule for all supervisees.)
+            </Typography>
+          </Section>
+
+          <Section title="Scope & Availability">
             <Typography variant="body1" color="text.secondary">
-              All services are provided via secure, HIPAA-compliant video platforms. Clinicians and clients must be physically located in a state where I am licensed (Texas/Colorado as applicable) at the time of service.
+              This is not crisis coverage and is not available on demand. If you are in an emergency, contact local emergency services.
             </Typography>
-          </Box>
-          <Box component="section" sx={{ mb: 6 }}>
-            <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>Cancellation & Rescheduling</Typography>
-            <Typography variant="body1" color="text.secondary">
-              A 24-hour notice is requested for all cancellations or rescheduling to avoid a late-cancel fee. This boundary protects the clinical frame and ensures sustainability.
-            </Typography>
-          </Box>
-          <Box component="section">
-            <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>Confidentiality Basics</Typography>
-            <Typography variant="body1" color="text.secondary">
-              Your privacy is protected by law and ethical standards. Limits to confidentiality (such as risk of harm to self/others or abuse reporting) will be discussed thoroughly during the orientation or fit consult.
-            </Typography>
-          </Box>
+          </Section>
+
         </Paper>
       </Container>
     </Box>
   );
 };
+
+const Section = ({ title, children }) => (
+  <Box component="section" sx={{ mb: 6 }}>
+    <Typography variant="h3" gutterBottom sx={{ fontSize: '1.5rem', fontWeight: 600 }}>{title}</Typography>
+    {children}
+  </Box>
+);
 
 export default PoliciesPage;
