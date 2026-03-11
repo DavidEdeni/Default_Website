@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Box, Container, Typography, Grid, List, ListItem, ListItemText } from '@mui/material';
 import treeImg from '../assets/tree.jpg';
+
+const HELP_IMAGE_STYLES = {
+  width: '100%',
+  height: 'auto',
+  boxShadow: '20px 20px 0px #E0D8D0',
+  border: '1px solid #E0D8D0'
+};
+
+const HELP_LIST_ITEM_STYLES = { alignItems: 'flex-start', py: 1 };
 
 const HelpAreas = () => {
   return (
@@ -12,12 +21,8 @@ const HelpAreas = () => {
               component="img"
               src={treeImg}
               alt="Grounded tree roots"
-              sx={{
-                width: '100%',
-                height: 'auto',
-                boxShadow: '20px 20px 0px #E0D8D0',
-                border: '1px solid #E0D8D0'
-              }}
+              loading="lazy"
+              sx={HELP_IMAGE_STYLES}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -36,7 +41,7 @@ const HelpAreas = () => {
                 { primary: "High-stakes strain", secondary: "burnout, shutdown, anxiety/depression linked to unresolved conflict or responsibility overload" },
                 { primary: "Consulting", secondary: "role clarity, decision pressure, and responsibility when a system is strained" }
               ].map((item, idx) => (
-                <ListItem key={idx} disableGutters sx={{ alignItems: 'flex-start', py: 1 }}>
+                <ListItem key={idx} disableGutters sx={HELP_LIST_ITEM_STYLES}>
                   <ListItemText
                     primary={<Typography variant="body1" sx={{ fontWeight: 600 }}>{item.primary}:</Typography>}
                     secondary={<Typography variant="body2" color="text.secondary">{item.secondary}</Typography>}
@@ -58,4 +63,4 @@ const HelpAreas = () => {
   );
 };
 
-export default HelpAreas;
+export default memo(HelpAreas);

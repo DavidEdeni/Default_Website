@@ -1,7 +1,16 @@
-import React from 'react';
-import { Box, Container, Typography, Grid, Button, Stack, List, ListItem, ListItemText } from '@mui/material';
+import React, { memo } from 'react';
+import { Box, Container, Typography, Grid, Button, List, ListItem, ListItemText } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import spheresImg from '../assets/spheres.jpg';
+
+const START_IMAGE_STYLES = {
+  width: '100%',
+  height: 'auto',
+  boxShadow: '-20px 20px 0px #E0D8D0',
+  border: '1px solid #E0D8D0'
+};
+
+const SECTION_BOX_STYLES = { mb: 6 };
 
 const StartHere = () => {
   return (
@@ -13,12 +22,8 @@ const StartHere = () => {
               component="img"
               src={spheresImg}
               alt="Ordered wooden spheres"
-              sx={{
-                width: '100%',
-                height: 'auto',
-                boxShadow: '-20px 20px 0px #E0D8D0',
-                border: '1px solid #E0D8D0'
-              }}
+              loading="lazy"
+              sx={START_IMAGE_STYLES}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -26,7 +31,7 @@ const StartHere = () => {
               Start Here: Supervision Fit
             </Typography>
 
-            <Box sx={{ mb: 6 }}>
+            <Box sx={SECTION_BOX_STYLES}>
               <Typography variant="h3" sx={{ fontSize: '1.25rem', fontWeight: 600, mb: 1 }}>
                 Step 1 — Brief screening meeting (10–15 minutes)
               </Typography>
@@ -92,4 +97,4 @@ const StartHere = () => {
   );
 };
 
-export default StartHere;
+export default memo(StartHere);
