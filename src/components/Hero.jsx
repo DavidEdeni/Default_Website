@@ -64,6 +64,13 @@ const CONTACT_INFO_STYLES = {
   fontWeight: 500 
 };
 
+const INFO_BOX_STYLES = { 
+  mb: 4, 
+  p: 2, 
+  bgcolor: 'rgba(255,255,255,0.05)', 
+  display: 'inline-block' 
+};
+
 const Hero = () => {
   return (
     <Box sx={HERO_SECTION_STYLES}>
