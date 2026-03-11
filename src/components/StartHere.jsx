@@ -19,6 +19,7 @@ const HIGHLIGHT_TEXT_STYLES = { fontWeight: 600, color: 'primary.main', mb: 4 };
 const LIST_LABEL_STYLES = { fontSize: '1.1rem', fontWeight: 600, mb: 2, textTransform: 'uppercase', letterSpacing: '0.05em' };
 const STAKE_TAGLINE_STYLES = { color: 'text.secondary', borderLeft: '3px solid #E0D8D0', pl: 2, mb: 6 };
 const CTA_BUTTON_STYLES = { px: 4, py: 2 };
+const FIT_SUMMARY_STYLES = { color: 'text.secondary', mb: 3 };
 
 const StartHere = () => {
   return (
