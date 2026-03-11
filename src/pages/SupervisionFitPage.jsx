@@ -1,21 +1,35 @@
-import React from 'react';
-import { Box, Container, Typography, Stack, Divider, List, ListItem, ListItemText, TextField, Button, Grid, Paper } from '@mui/material';
+import { Box, Container, Typography, Stack, Divider, List, ListItem, ListItemText, TextField, Button, Grid, Paper, Link as MuiLink } from '@mui/material';
+
+
+const PAGE_WRAPPER_STYLES = { py: 8, bgcolor: 'background.default' };
+const HEADER_SUBTITLE_STYLES = { textTransform: 'uppercase', letterSpacing: '0.12em', mb: 1, fontWeight: 600 };
+const PAGE_TITLE_STYLES = { mb: 6, fontSize: { xs: '2.5rem', md: '3.5rem' } };
+const CONTENT_PAPER_STYLES = { p: { xs: 4, md: 8 }, border: '1px solid #E0D8D0', bgcolor: 'background.paper' };
+const SECTION_HEADER_STYLES = { fontSize: '1.75rem', fontWeight: 600 };
+const INTRO_TEXT_STYLES = { fontSize: '1.15rem' };
+const NOT_FIT_BOX_STYLES = { mb: 8, p: 4, bgcolor: '#FFF9F9', border: '1px solid #FFE0E0' };
+const NOT_FIT_TITLE_STYLES = { mb: 3, color: '#B71C1C', fontWeight: 600 };
+const FORM_TITLE_STYLES = { fontSize: '2.25rem', mb: 3 };
+const FORM_SUBTITLE_STYLES = { mb: 6, color: 'text.secondary' };
+const CTA_BUTTON_STYLES = { py: 2, px: 8 };
+const FOOTER_ITALIC_STYLES = { mt: 4, color: 'text.secondary', fontStyle: 'italic' };
+const FOOTER_EMAIL_LINK_STYLES = { mt: 2 };
 
 const SupervisionFitPage = () => {
   return (
-    <Box sx={{ py: 8, bgcolor: 'background.default' }}>
+    <Box sx={PAGE_WRAPPER_STYLES}>
       <Container maxWidth="md">
-        <Typography variant="body2" color="secondary.light" sx={{ textTransform: 'uppercase', letterSpacing: '0.12em', mb: 1, fontWeight: 600 }}>
+        <Typography variant="body2" color="secondary.light" sx={HEADER_SUBTITLE_STYLES}>
           Integrated Relational Dynamics, PLLC &middot; Kotia K. Whitaker, LMFT-S
         </Typography>
-        <Typography variant="h1" gutterBottom sx={{ mb: 6, fontSize: { xs: '2.5rem', md: '3.5rem' } }}>
+        <Typography variant="h1" gutterBottom sx={PAGE_TITLE_STYLES}>
           Supervision Fit Consult
         </Typography>
 
-        <Paper elevation={0} sx={{ p: { xs: 4, md: 8 }, border: '1px solid #E0D8D0', bgcolor: 'background.paper' }}>
+        <Paper elevation={0} sx={CONTENT_PAPER_STYLES}>
           
           <Section title="What this is" id="what-this-is">
-             <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.15rem' }}>
+             <Typography variant="body1" color="text.secondary" sx={INTRO_TEXT_STYLES}>
               A Supervision Fit Consult is a structured fit-and-frame-setting conversation to confirm alignment and establish the supervision frame. It is not supervision and does not include case consultation.
             </Typography>
           </Section>
@@ -49,8 +63,8 @@ const SupervisionFitPage = () => {
             ]} />
           </Section>
 
-          <Box sx={{ mb: 8, p: 4, bgcolor: '#FFF9F9', border: '1px solid #FFE0E0' }}>
-            <Typography variant="h5" sx={{ mb: 3, color: '#B71C1C', fontWeight: 600 }}>Stopping points / not a fit</Typography>
+          <Box sx={NOT_FIT_BOX_STYLES}>
+            <Typography variant="h5" sx={NOT_FIT_TITLE_STYLES}>Stopping points / not a fit</Typography>
             <BulletList color="#B71C1C" items={[
               "No crisis coverage or on-demand availability",
               "No outcome guarantees",
@@ -62,10 +76,10 @@ const SupervisionFitPage = () => {
           <Divider sx={{ my: 8 }} />
 
           <Box id="inquiry-form">
-            <Typography variant="h2" align="center" gutterBottom sx={{ fontSize: '2.25rem', mb: 3 }}>
+            <Typography variant="h2" align="center" gutterBottom sx={FORM_TITLE_STYLES}>
               Request a Consult
             </Typography>
-            <Typography variant="body1" align="center" paragraph sx={{ mb: 6, color: 'text.secondary' }}>
+            <Typography variant="body1" align="center" paragraph sx={FORM_SUBTITLE_STYLES}>
               To explore a Supervision Fit Consult, please provide the following details. This structure helps minimize back-and-forth and respects your clinical time.
             </Typography>
 
@@ -96,8 +110,9 @@ const SupervisionFitPage = () => {
                    <Button 
                     variant="contained" 
                     size="large" 
-                    sx={{ py: 2, px: 8 }}
+                    sx={CTA_BUTTON_STYLES}
                     href="mailto:integrated.relational.dynamics@gmail.com?subject=Supervision Fit Consult Inquiry"
+                    aria-label="Submit your supervision fit consult inquiry via email"
                    >
                      Submit Inquiry via Email &rarr;
                    </Button>
@@ -105,11 +120,11 @@ const SupervisionFitPage = () => {
               </Grid>
             </Grid>
 
-            <Typography variant="body2" align="center" sx={{ mt: 4, color: 'text.secondary', fontStyle: 'italic' }}>
+            <Typography variant="body2" align="center" sx={FOOTER_ITALIC_STYLES}>
               Communication boundary: Please do not include PHI or identifying client details in email or the form. Email is not monitored for emergencies.
             </Typography>
-            <Typography variant="body2" align="center" sx={{ mt: 2 }}>
-              Email: <Link href="mailto:integrated.relational.dynamics@gmail.com" sx={{ textDecoration: 'underline' }}>integrated.relational.dynamics@gmail.com</Link>
+            <Typography variant="body2" align="center" sx={FOOTER_EMAIL_LINK_STYLES}>
+              Email: <MuiLink href="mailto:integrated.relational.dynamics@gmail.com" sx={{ textDecoration: 'underline' }} aria-label="Send email to integrated.relational.dynamics@gmail.com">integrated.relational.dynamics@gmail.com</MuiLink>
             </Typography>
           </Box>
 
@@ -121,7 +136,7 @@ const SupervisionFitPage = () => {
 
 const Section = ({ title, children, id }) => (
   <Box id={id} component="section" sx={{ mb: 8 }}>
-    <Typography variant="h2" gutterBottom sx={{ fontSize: '1.75rem', fontWeight: 600 }}>{title}</Typography>
+    <Typography variant="h2" gutterBottom sx={SECTION_HEADER_STYLES}>{title}</Typography>
     {children}
   </Box>
 );
@@ -130,7 +145,7 @@ const BulletList = ({ items, color = 'text.secondary' }) => (
   <List sx={{ mb: 0 }}>
     {items.map((item, idx) => (
       <ListItem key={idx} disableGutters sx={{ alignItems: 'flex-start', py: 0.5 }}>
-        <ListItemText primary={<Typography variant="body1" sx={{ color }}><Box component="span" sx={{ mr: 2, fontWeight: 700 }}>&mdash;</Box> {item}</Typography>} />
+        <ListItemText primary={<Typography variant="body1" sx={{ color }}><Box component="span" sx={{ mr: 2, fontWeight: 700 }} aria-hidden="true">&mdash;</Box> {item}</Typography>} />
       </ListItem>
     ))}
   </List>
