@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Stack, Divider, List, ListItem, ListItemText, TextField, Button, Grid, Paper, Link as MuiLink } from '@mui/material';
+import { Box, Container, Typography, Stack, Divider, List, ListItem, ListItemText, TextField, Button, Grid, Paper } from '@mui/material';
 
 
 const PAGE_WRAPPER_STYLES = { py: 8, bgcolor: 'background.default' };
@@ -124,7 +124,7 @@ const SupervisionFitPage = () => {
               Communication boundary: Please do not include PHI or identifying client details in email or the form. Email is not monitored for emergencies.
             </Typography>
             <Typography variant="body2" align="center" sx={FOOTER_EMAIL_LINK_STYLES}>
-              Email: <MuiLink href="mailto:integrated.relational.dynamics@gmail.com" sx={{ textDecoration: 'underline' }} aria-label="Send email to integrated.relational.dynamics@gmail.com">integrated.relational.dynamics@gmail.com</MuiLink>
+              Email: <PageLink href="mailto:integrated.relational.dynamics@gmail.com" sx={{ textDecoration: 'underline' }} aria-label="Send email to integrated.relational.dynamics@gmail.com">integrated.relational.dynamics@gmail.com</PageLink>
             </Typography>
           </Box>
 
@@ -151,7 +151,7 @@ const BulletList = ({ items, color = 'text.secondary' }) => (
   </List>
 );
 
-const Link = ({ href, children, sx }) => (
+const PageLink = ({ href, children, sx }) => (
   <Box component="a" href={href} sx={{ color: 'primary.main', textDecoration: 'none', fontWeight: 600, ...sx }}>
     {children}
   </Box>

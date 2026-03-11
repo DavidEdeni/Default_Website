@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Stack, Paper, Divider, Button, List, ListItem, ListItemText, Grid, Link as MuiLink } from '@mui/material';
+import { Box, Container, Typography, Stack, Paper, Divider, Button, List, ListItem, ListItemText, Grid } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
 
@@ -117,7 +117,7 @@ const SupervisionPage = () => {
             </Button>
           </Stack>
            <Typography variant="body2" align="center" sx={FOOTER_EMAIL_STYLES}>
-              Email: <MuiLink href="mailto:integrated.relational.dynamics@gmail.com" sx={{ textDecoration: 'underline' }} aria-label="Send email to integrated.relational.dynamics@gmail.com">integrated.relational.dynamics@gmail.com</MuiLink>
+              Email: <PageLink href="mailto:integrated.relational.dynamics@gmail.com" sx={{ textDecoration: 'underline' }} aria-label="Send email to integrated.relational.dynamics@gmail.com">integrated.relational.dynamics@gmail.com</PageLink>
             </Typography>
 
         </Paper>
@@ -143,7 +143,7 @@ const BulletList = ({ items }) => (
   </List>
 );
 
-const Link = ({ href, children, sx }) => (
+const PageLink = ({ href, children, sx }) => (
   <Box component="a" href={href} sx={{ color: 'primary.main', textDecoration: 'none', fontWeight: 600, ...sx }}>
     {children}
   </Box>

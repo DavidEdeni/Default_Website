@@ -55,7 +55,7 @@ const AboutSection = () => {
                   "Ethical judgment when roles and stakes collide",
                   "A steady pace: responsibility over urgency"
                 ].map((item, idx) => (
-                  <ListItem key={idx} disableGutters sx={{ py: 0.5 }}>
+                  <ListItem key={idx} disableGutters sx={ITEM_TEXT_STYLES}>
                     <ListItemText primary={<Typography variant="body1" color="text.secondary">&bull; {item}</Typography>} />
                   </ListItem>
                 ))}
@@ -72,7 +72,7 @@ const AboutSection = () => {
                   "Supervision used to pressure someone else",
                   "A plan built on urgency rather than ownership"
                 ].map((item, idx) => (
-                  <ListItem key={idx} disableGutters sx={{ py: 0.5 }}>
+                  <ListItem key={idx} disableGutters sx={ITEM_TEXT_STYLES}>
                     <ListItemText primary={<Typography variant="body1" color="text.secondary">&bull; {item}</Typography>} />
                   </ListItem>
                 ))}
