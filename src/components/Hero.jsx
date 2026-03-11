@@ -1,21 +1,38 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Box, Container, Typography, Button, Stack, Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import heroBg from '../assets/header_wood.jpg';
 
+const HERO_SECTION_STYLES = {
+  bgcolor: 'primary.main',
+  color: 'primary.contrastText',
+  pt: { xs: 10, md: 15 },
+  pb: { xs: 8, md: 12 },
+  backgroundImage: `linear-gradient(rgba(44, 37, 32, 0.85), rgba(44, 37, 32, 0.9)), url(${heroBg})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+};
+
+const CONSULT_BUTTON_STYLES = {
+  bgcolor: '#FFF',
+  color: 'primary.main',
+  '&:hover': { bgcolor: '#F0F0F0' },
+  fontSize: '1.1rem',
+  py: 2.5,
+  px: 5,
+  fontWeight: 600
+};
+
+const INFO_BOX_STYLES = { 
+  mb: 4, 
+  p: 2, 
+  bgcolor: 'rgba(255,255,255,0.05)', 
+  display: 'inline-block' 
+};
+
 const Hero = () => {
   return (
-    <Box
-      sx={{
-        bgcolor: 'primary.main',
-        color: 'primary.contrastText',
-        pt: { xs: 10, md: 15 },
-        pb: { xs: 8, md: 12 },
-        backgroundImage: `linear-gradient(rgba(44, 37, 32, 0.85), rgba(44, 37, 32, 0.9)), url(${heroBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
+    <Box sx={HERO_SECTION_STYLES}>
       <Container maxWidth="lg">
         <Stack spacing={2} sx={{ mb: 4 }}>
           <Typography variant="h5" color="secondary.light" sx={{ letterSpacing: '0.1em', fontWeight: 600 }}>
@@ -41,7 +58,7 @@ const Hero = () => {
           </Typography>
         </Stack>
 
-        <Box sx={{ mb: 4, p: 2, bgcolor: 'rgba(255,255,255,0.05)', display: 'inline-block' }}>
+        <Box sx={INFO_BOX_STYLES}>
           <Typography variant="body2" sx={{ color: 'secondary.light', fontWeight: 500 }}>
             Telehealth (Texas) &middot; Private pay &middot; Superbills available (reimbursement not guaranteed)
           </Typography>
@@ -53,15 +70,7 @@ const Hero = () => {
             to="/supervision-fit"
             variant="contained"
             size="large"
-            sx={{
-              bgcolor: '#FFF',
-              color: 'primary.main',
-              '&:hover': { bgcolor: '#F0F0F0' },
-              fontSize: '1.1rem',
-              py: 2.5,
-              px: 5,
-              fontWeight: 600
-            }}
+            sx={CONSULT_BUTTON_STYLES}
           >
             Request a Supervision Fit Consult &rarr;
           </Button>
@@ -88,7 +97,7 @@ const Hero = () => {
   );
 };
 
-const LinkRouter = ({ to, label }) => (
+const LinkRouter = memo(({ to, label }) => (
   <Typography
     component={RouterLink}
     to={to}
@@ -104,6 +113,8 @@ const LinkRouter = ({ to, label }) => (
   >
     {label}
   </Typography>
-);
+));
 
-export default Hero;
+LinkRouter.displayName = 'LinkRouter';
+
+export default memo(Hero);

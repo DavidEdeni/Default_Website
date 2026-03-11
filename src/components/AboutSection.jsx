@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Box, Container, Typography, Grid, List, ListItem, ListItemText, Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import hourglassImg from '../assets/hourglass.jpg';
+
+const ABOUT_IMAGE_STYLES = {
+  width: '100%',
+  height: 'auto',
+  boxShadow: '20px 20px 0px #E0D8D0',
+  border: '1px solid #E0D8D0'
+};
 
 const AboutSection = () => {
   return (
@@ -18,12 +25,8 @@ const AboutSection = () => {
                 component="img"
                 src={hourglassImg}
                 alt="Symmetry symbolized by hourglass"
-                sx={{
-                  width: '100%',
-                  height: 'auto',
-                  boxShadow: '20px 20px 0px #E0D8D0',
-                  border: '1px solid #E0D8D0'
-                }}
+                loading="lazy"
+                sx={ABOUT_IMAGE_STYLES}
               />
             </Grid>
             <Grid item xs={12} md={6}>
@@ -88,4 +91,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default memo(AboutSection);

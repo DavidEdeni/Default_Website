@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Box, Container, Typography, Grid, Paper, Button, Stack, Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { Element } from 'react-scroll';
@@ -27,6 +27,18 @@ const services = [
   }
 ];
 
+const SERVICE_PAPER_STYLES = (isPrimary) => ({
+  p: 4,
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  border: '1px solid #E0D8D0',
+  borderTop: isPrimary ? '4px solid #2C2520' : '1px solid #E0D8D0',
+  bgcolor: isPrimary ? '#F9F7F5' : 'background.paper',
+  transition: 'transform 0.2s',
+  '&:hover': { transform: 'translateY(-4px)' }
+});
+
 const Services = () => {
   return (
     <Box component="section" sx={{ py: 12, bgcolor: 'background.default' }}>
@@ -40,17 +52,7 @@ const Services = () => {
               <Grid item xs={12} md={4} key={index}>
                 <Paper
                   elevation={0}
-                  sx={{
-                    p: 4,
-                    height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    border: '1px solid #E0D8D0',
-                    borderTop: service.isPrimary ? '4px solid #2C2520' : '1px solid #E0D8D0',
-                    bgcolor: service.isPrimary ? '#F9F7F5' : 'background.paper',
-                    transition: 'transform 0.2s',
-                    '&:hover': { transform: 'translateY(-4px)' }
-                  }}
+                  sx={SERVICE_PAPER_STYLES(service.isPrimary)}
                 >
                   <Typography variant="h3" gutterBottom sx={{ fontSize: '1.5rem', fontWeight: 600 }}>
                     {service.title}
@@ -115,4 +117,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default memo(Services);
