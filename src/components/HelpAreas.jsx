@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { Box, Container, Typography, Grid, List, ListItem, ListItemText } from '@mui/material';
 import treeImg from '../assets/8a46ffa53352710009d9cc110eff458f-2.jpg';
 

@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { Box, Container, Typography, Grid, Button, List, ListItem, ListItemText } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import spheresImg from '../assets/8a46ffa53352710009d9cc110eff458f-4.jpg';

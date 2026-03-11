@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { Box, Container, Typography, Grid, List, ListItem, ListItemText, Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { Element } from 'react-scroll';
