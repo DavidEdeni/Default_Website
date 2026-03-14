@@ -6,7 +6,7 @@ import logoImg from '../assets/Screenshot 2026-03-14 141610.png';
 const HERO_SECTION_STYLES = {
   bgcolor: 'background.default',
   color: 'text.primary',
-  pt: { xs: 6, md: 9 },
+  pt: { xs: 5, md: 8 },
   pb: { xs: 8, md: 12 },
   minHeight: '85vh',
   display: 'flex',
