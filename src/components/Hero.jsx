@@ -21,7 +21,7 @@ const LOGO_IMAGE_STYLES = {
   height: 'auto',
   display: 'block',
   position: 'relative',
-  left: { xs: 0, md: '-120px' }, // Shifted exactly 96px left from base position
+  left: { xs: 0, md: '-120px' }, // Shifted exactly 120px left from base position
   top: { xs: 0, md: '-175px' }, // Moved up 1200px
   mixBlendMode: 'multiply', // blends the white background with the theme background
   filter: 'contrast(1.4) saturate(1.1) brightness(0.9) drop-shadow(15px 15px 20px rgba(0,0,0,0.8))' // Darker Bottom-right shadow
@@ -76,7 +76,9 @@ const DESCRIPTION_TEXT_STYLES = {
   maxWidth: '600px',
   mx: 'auto',
   lineHeight: 1.6,
-  mt: '300px', // Shifted up 200px from previous 500px
+  mt: '300px', // Original margin
+  position: 'relative',
+  top: '-120px', // Shifted up 120px independently
   mb: 10
 };
 
