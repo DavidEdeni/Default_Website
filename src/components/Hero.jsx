@@ -20,10 +20,9 @@ const LOGO_IMAGE_STYLES = {
   maxWidth: { xs: '450px', md: '600px' }, // Made image slightly larger
   height: 'auto',
   display: 'block',
-  boxShadow: '-15px 15px 25px rgba(0,0,0,0.15)', // Off-center drop shadow to match image
-  margin: '0 auto',
+  marginLeft: { xs: 'auto', md: '-2rem' }, // Shifted left on desktop
   mixBlendMode: 'multiply', // blends the white background with the theme background
-  filter: 'contrast(1.2) saturate(1.1) brightness(0.95) drop-shadow(2px 4px 6px rgba(0,0,0,0.1))'
+  filter: 'contrast(1.4) saturate(1.1) brightness(0.9) drop-shadow(15px 15px 20px rgba(0,0,0,0.4))' // Bottom-right shadow
 };
 
 const SUBTITLE_STYLES = { 
