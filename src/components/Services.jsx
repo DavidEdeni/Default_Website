@@ -43,7 +43,7 @@ const Services = () => {
     <Box component="section" sx={{ py: { xs: 12, md: 18 }, bgcolor: 'background.default' }}>
       <Element name="services" id="services">
         <Container maxWidth="lg">
-          <Typography variant="h2" align="center" sx={{ mb: 10, position: 'relative', '&:after': { content: '""', position: 'absolute', bottom: -20, left: '50%', transform: 'translateX(-50%)', width: 60, height: 1, bgcolor: 'primary.main', opacity: 0.3 } }}>
+          <Typography variant="h2" align="center" sx={{ mb: 10, position: 'relative' }}>
             Services
           </Typography>
           <Grid container spacing={6} justifyContent="center">

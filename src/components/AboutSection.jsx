@@ -11,7 +11,7 @@ const ABOUT_IMAGE_STYLES = {
 };
 
 const SECTION_BOX_STYLES = { py: { xs: 12, md: 18 }, bgcolor: 'background.default' };
-const HEADER_TITLE_STYLES = { mb: 8, position: 'relative', '&:after': { content: '""', position: 'absolute', bottom: -15, left: '50%', transform: 'translateX(-50%)', width: 40, height: 1, bgcolor: 'primary.main', opacity: 0.2 } };
+const HEADER_TITLE_STYLES = { mb: 8, position: 'relative' };
 const SUBHEADER_TITLE_STYLES = { fontSize: '1.25rem', fontWeight: 600, mb: 3, letterSpacing: '0.05em', textTransform: 'uppercase' };
 const ITEM_TEXT_STYLES = { py: 0.75 };
 const ITALIC_TEXT_STYLES = { mt: 4, fontStyle: 'italic', color: 'text.secondary', fontWeight: 300 };

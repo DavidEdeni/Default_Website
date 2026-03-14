@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Divider, TextField, Button, Grid } from '@mui/material';
+import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
 const PAGE_WRAPPER_STYLES = { py: { xs: 12, md: 18 }, bgcolor: 'background.default' };
@@ -6,18 +6,7 @@ const PAGE_TITLE_STYLES = {
   textAlign: 'center',
   mb: 2, 
   fontSize: { xs: '2.5rem', md: '4rem' },
-  position: 'relative',
-  '&:after': {
-    content: '""',
-    position: 'absolute',
-    bottom: -20,
-    left: '50%',
-    transform: 'translateX(-50%)',
-    width: 80,
-    height: 1,
-    bgcolor: 'primary.main',
-    opacity: 0.2
-  }
+  position: 'relative'
 };
 const FIT_COLUMN_TITLE_STYLES = {
   fontSize: '1.25rem',
@@ -44,16 +33,6 @@ const FIT_LIST_STYLES = {
   }
 };
 
-const STATUS_SUBTITLE_STYLES = { 
-  textAlign: 'center',
-  mb: 10, 
-  fontWeight: 600,
-  textTransform: 'uppercase',
-  letterSpacing: '0.1em',
-  fontSize: '0.85rem',
-  color: 'secondary.main',
-  mt: 4
-};
 const CONTENT_CONTAINER_STYLES = { maxWidth: '800px', mx: 'auto' };
 
 const SupervisionFitPage = () => {

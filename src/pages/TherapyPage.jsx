@@ -8,18 +8,7 @@ const PAGE_TITLE_STYLES = {
   textAlign: 'center',
   mb: 2, 
   fontSize: { xs: '2.5rem', md: '4rem' },
-  position: 'relative',
-  '&:after': {
-    content: '""',
-    position: 'absolute',
-    bottom: -20,
-    left: '50%',
-    transform: 'translateX(-50%)',
-    width: 80,
-    height: 1,
-    bgcolor: 'primary.main',
-    opacity: 0.2
-  }
+  position: 'relative'
 };
 const STATUS_SUBTITLE_STYLES = { 
   textAlign: 'center',
