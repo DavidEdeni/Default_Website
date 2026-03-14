@@ -76,7 +76,7 @@ const DESCRIPTION_TEXT_STYLES = {
   maxWidth: '600px',
   mx: 'auto',
   lineHeight: 1.6,
-  mt: '500px', // Shift text down by 500px
+  mt: '300px', // Shifted up 200px from previous 500px
   mb: 10
 };
 
