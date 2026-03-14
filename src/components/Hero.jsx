@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Box, Container, Typography, Button, Link, Grid } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import logoImg from '../assets/8a46ffa53352710009d9cc110eff458f-0.jpg';
+import logoImg from '../assets/Screenshot 2026-03-14 141610.png';
 
 const HERO_SECTION_STYLES = {
   bgcolor: 'background.default',
