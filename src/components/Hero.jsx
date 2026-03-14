@@ -78,7 +78,7 @@ const DESCRIPTION_TEXT_STYLES = {
   lineHeight: 1.6,
   mt: '300px', // Original margin
   position: 'relative',
-  top: '-200px', // Shifted up 120px independently
+  top: '-165px', // Shifted up 120px independently
   mb: 10
 };
 
