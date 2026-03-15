@@ -21,7 +21,7 @@ const LOGO_IMAGE_STYLES = {
   height: 'auto',
   display: 'block',
   position: 'relative',
-  right: { xs: 0, md: '30px' }, // Shifted exactly 30px right from base position
+  right: { xs: 0, md: '50px' }, // Shifted exactly 30px right from base position
   top: { xs: 0, md: '-175px' }, // Shifted exactly  175px up from base position
   mixBlendMode: 'multiply', // blends the white background with the theme background
   filter: 'contrast(1.4) saturate(1.1) brightness(0.9) drop-shadow(15px 15px 20px rgba(0,0,0,0.8))' // Darker Bottom-right shadow
