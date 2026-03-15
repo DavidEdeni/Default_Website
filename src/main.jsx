@@ -18,11 +18,6 @@ import '@fontsource/inter/600.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ErrorBoundary>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <App />
-      </ThemeProvider>
-    </ErrorBoundary>
+    <div>Hello World</div>
   </React.StrictMode>,
 )
