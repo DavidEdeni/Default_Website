@@ -3,25 +3,25 @@ import { Link as RouterLink } from 'react-router-dom';
 import spheresImg from '../assets/8a46ffa53352710009d9cc110eff458f-4.jpg';
 
 
-// const PAGE_WRAPPER_STYLES = { py: { xs: 12, md: 18 }, bgcolor: 'background.default' };
-// const PAGE_TITLE_STYLES = { 
-//   textAlign: 'center',
-//   mb: 2, 
-//   fontSize: { xs: '2.5rem', md: '4rem' },
-//   position: 'relative'
-// };
-// const STATUS_SUBTITLE_STYLES = { 
-//   textAlign: 'center',
-//   mb: 10, 
-//   fontWeight: 600,
-//   textTransform: 'uppercase',
-//   letterSpacing: '0.1em',
-//   fontSize: '0.85rem',
-//   color: 'secondary.main',
-//   mt: 4
-// };
-// const CONTENT_CONTAINER_STYLES = { maxWidth: '800px', mx: 'auto' };
-// const INTRO_TEXT_STYLES = { fontSize: '1.25rem', lineHeight: 1.9, color: 'text.primary', mb: 6, fontWeight: 300 };
+const PAGE_WRAPPER_STYLES = { py: { xs: 12, md: 18 }, bgcolor: 'background.default' };
+const PAGE_TITLE_STYLES = {
+  textAlign: 'center',
+  mb: 2,
+  fontSize: { xs: '2.5rem', md: '4rem' },
+  position: 'relative'
+};
+const STATUS_SUBTITLE_STYLES = {
+  textAlign: 'center',
+  mb: 10,
+  fontWeight: 600,
+  textTransform: 'uppercase',
+  letterSpacing: '0.1em',
+  fontSize: '0.85rem',
+  color: 'secondary.main',
+  mt: 4
+};
+const CONTENT_CONTAINER_STYLES = { maxWidth: '800px', mx: 'auto' };
+const INTRO_TEXT_STYLES = { fontSize: '1.25rem', lineHeight: 1.9, color: 'text.primary', mb: 6, fontWeight: 300 };
 
 // const TherapyPage = () => {
 //   return (
