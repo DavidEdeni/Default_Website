@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Box, Container, Typography, Button, Link, Grid } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import ParticleScene from './ParticleScene';
+
 
 const HERO_SECTION_STYLES = {
   bgcolor: 'background.default',
@@ -82,7 +82,7 @@ const QUOTE_STYLES = {
 const Hero = () => {
   return (
     <Box sx={HERO_SECTION_STYLES}>
-      <ParticleScene />
+
       <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
           {/* Centered Text Content */}
           <Grid item xs={12} md={10} lg={8} sx={{ textAlign: 'center', px: { md: 4 } }}>
