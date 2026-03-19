@@ -89,9 +89,7 @@ const Footer = () => {
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', alignItems: 'center', gap: 2 }}>
           <Stack direction="row" spacing={3}>
-            <FooterLink to="/policies" label="Policies" />
-            <FooterLink to="/fees" label="Fees" />
-            <FooterLink to="/resources" label="Resources" />
+
             <Link
               component="button"
               onClick={() => handleNavClick('contact')}
@@ -117,20 +115,6 @@ const Footer = () => {
   );
 };
 
-const FooterLink = ({ to, label }) => (
-  <Link
-    component={RouterLink}
-    to={to}
-    sx={{
-      fontSize: '0.85rem',
-      color: 'rgba(242, 239, 233, 0.7)',
-      textDecoration: 'none',
-      '&:hover': { color: '#FFF' }
-    }}
 
-  >
-    {label}
-  </Link>
-);
 
 export default Footer;

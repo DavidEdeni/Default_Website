@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Box, Container, Typography, Button, Link, Grid } from '@mui/material';
+import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
 
@@ -109,11 +109,7 @@ const Hero = () => {
               Request a Consultation
             </Button>
 
-            <Box sx={{ display: 'flex', justifyContent: 'center', gap: { xs: 2, md: 4 }, flexWrap: 'wrap', mb: 4 }}>
-              <LinkRouter to="/supervision" label="Supervision +" />
-              <LinkRouter to="/consulting" label="Consulting +" />
-              <LinkRouter to="/therapy" label="Therapy +" />
-            </Box>
+
 
             <Typography variant="body1" sx={{ ...DESCRIPTION_TEXT_STYLES, mt: 4 }}>
               A practice based on <span style={{ textDecoration: 'underline' }}>naming truth</span> that <span style={{ textDecoration: 'underline' }}>helps</span> clarify <span style={{ textDecoration: 'underline' }}>what belongs to you</span> and what does not, without forcing repair, control, or closure
@@ -129,31 +125,6 @@ const Hero = () => {
   );
 };
 
-const LinkRouter = memo(({ to, label }) => (
-  <Link
-    component={RouterLink}
-    to={to}
-    aria-label={label}
-    sx={{
-      color: 'text.secondary',
-      textDecoration: 'none',
-      fontSize: '0.8rem',
-      fontWeight: 600,
-      textTransform: 'uppercase',
-      letterSpacing: '0.15em',
-      borderBottom: '1px solid transparent',
-      pb: 0.5,
-      transition: 'all 0.3s ease',
-      '&:hover': {
-        color: 'primary.main',
-        borderColor: 'primary.main'
-      }
-    }}
-  >
-    {label}
-  </Link>
-));
 
-LinkRouter.displayName = 'LinkRouter';
 
 export default memo(Hero);
