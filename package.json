@@ -10,16 +10,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "@mui/material": "^5.15.15",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@fontsource/inter": "^5.0.17",
+    "@fontsource/playfair-display": "^5.0.12",
+    "@mediapipe/drawing_utils": "^0.3.1675466124",
+    "@mediapipe/hands": "^0.4.1675469240",
     "@mui/icons-material": "^5.15.15",
+    "@mui/material": "^5.15.15",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.5.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-router-dom": "^6.22.3",
     "react-scroll": "^1.9.0",
-    "@fontsource/playfair-display": "^5.0.12",
-    "@fontsource/inter": "^5.0.17"
+    "three": "^0.183.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
