@@ -27,3 +27,10 @@ Are they installed?
 [2m6:32:19 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ParticleScene.jsx[22m
 [2m6:35:33 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx[22m
 [2m6:35:33 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx[22m
+[2m6:37:12 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PoliciesPage.jsx[22m
+[2m6:37:12 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ResourcesPage.jsx[22m
+[2m6:37:12 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/SupervisionFitPage.jsx[22m
+[2m6:37:12 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/SupervisionPage.jsx[22m
+[2m6:37:12 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/TherapyPage.jsx[22m
+[2m6:37:13 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ConsultingPage.jsx[22m
+[2m6:37:13 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/FeesPage.jsx[22m
