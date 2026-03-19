@@ -1,5 +1,5 @@
 import { Box, Container, Typography, Grid, Link, Divider, Stack } from '@mui/material';
-import { useNavigate, useLocation, Link as RouterLink } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 
 const Footer = () => {

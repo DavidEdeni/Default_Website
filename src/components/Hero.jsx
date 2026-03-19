@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 
 
 const HERO_SECTION_STYLES = {
@@ -99,8 +99,7 @@ const Hero = () => {
             </Typography>
 
             <Button
-              component={RouterLink}
-              to="/supervision-fit"
+              onClick={() => scroller.scrollTo('contact', { duration: 500, smooth: 'easeInOutQuart', offset: -70 })}
               variant="contained"
               size="large"
               sx={CONSULT_BUTTON_STYLES}
