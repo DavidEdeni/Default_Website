@@ -1,0 +1,99 @@
+--- dev_output.txt ---
+
+> ird-pllc@1.0.0 dev
+> vite
+
+
+VITE v5.4.21 ready in 385 ms
+
+ Local: http://localhost:3000/
+ Network: http://192.168.86.21:3000/        
+ press h + enter to show help
+Error: The following dependencies are imported but could not be resolved:
+
+  @mediapipe/hands (imported by C:/Users/david/.gemini/antigravity/antigravity_websites/Default_Website/src/hooks/useHandTracking.js)
+  @mediapipe/camera_utils (imported by C:/Users/david/.gemini/antigravity/antigravity_websites/Default_Website/src/hooks/useHandTracking.js)
+
+Are they installed?
+    at file:///C:/Users/david/.gemini/antigravity/antigravity_websites/Default_Website/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:50669:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/Users/david/.gemini/antigravity/antigravity_websites/Default_Website/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:50174:26
+ 6:28:27 PM [vite] optimized dependencies changed. reloading
+ 6:31:49 PM [vite] page reload src/theme.js
+ 6:31:58 PM [vite] hmr update /src/components/Header.jsx
+ 6:32:01 PM [vite] hmr update /src/components/Footer.jsx
+ 6:32:03 PM [vite] hmr update /src/components/Footer.jsx
+ 6:32:11 PM [vite] hmr update /src/components/Hero.jsx
+ 6:32:13 PM [vite] hmr update /src/components/ParticleScene.jsx
+ 6:32:19 PM [vite] hmr update /src/components/ParticleScene.jsx
+ 6:35:33 PM [vite] hmr update /src/components/Hero.jsx
+ 6:35:33 PM [vite] hmr update /src/components/Hero.jsx
+ 6:37:12 PM [vite] hmr update /src/pages/PoliciesPage.jsx
+ 6:37:12 PM [vite] hmr update /src/pages/ResourcesPage.jsx
+ 6:37:12 PM [vite] hmr update /src/pages/SupervisionFitPage.jsx
+ 6:37:12 PM [vite] hmr update /src/pages/SupervisionPage.jsx
+ 6:37:12 PM [vite] hmr update /src/pages/TherapyPage.jsx
+ 6:37:13 PM [vite] hmr update /src/pages/ConsultingPage.jsx
+ 6:37:13 PM [vite] hmr update /src/pages/FeesPage.jsx
+
+--- lint_audit.txt ---
+
+Oops! Something went wrong! :(
+
+ESLint: 8.57.1
+
+No files matching the pattern "src" were found.
+Please check for typing mistakes in the pattern.
+
+
+--- lint_output.txt ---
+
+Oops! Something went wrong! :(
+
+ESLint: 8.57.1
+
+ESLint couldn't find a configuration file. To set up a configuration file for this project, please run:
+
+    npm init @eslint/config
+
+ESLint looked for configuration files in C:\Users\david\.gemini\antigravity\antigravity_websites\Integrated_Relational_Dynamics_PLLC\src and its ancestors. If it found none, it then looked in your home directory.
+
+If you think you already have a configuration file or if you need more help, please stop by the ESLint Discord server: https://eslint.org/chat
+
+
+--- npm_output.txt ---
+npm error code ERESOLVE
+npm error ERESOLVE unable to resolve dependency tree
+npm error
+npm error While resolving: ird-pllc@1.0.0
+npm error Found: react@18.3.1
+npm error node_modules/react
+npm error   react@"^18.3.1" from the root project
+npm error   peer react@"*" from expo@55.0.8
+npm error   node_modules/expo
+npm error     peerOptional expo@">=43.0" from @react-three/fiber@9.5.0
+npm error     node_modules/@react-three/fiber
+npm error       @react-three/fiber@"^9.5.0" from the root project
+npm error       1 more (@react-three/drei)
+npm error     peer expo@"*" from @expo/dom-webview@55.0.3
+npm error     node_modules/@expo/dom-webview
+npm error       peerOptional @expo/dom-webview@"*" from expo@55.0.8
+npm error     4 more (@expo/metro-runtime, expo-asset, expo-file-system, expo-gl)
+npm error   9 more (@expo/dom-webview, @expo/metro-runtime, react-dom, ...)
+npm error
+npm error Could not resolve dependency:
+npm error peer react@">=19 <19.3" from @react-three/fiber@9.5.0
+npm error node_modules/@react-three/fiber
+npm error   @react-three/fiber@"^9.5.0" from the root project
+npm error   peer @react-three/fiber@"^9.0.0" from @react-three/drei@10.7.7
+npm error   node_modules/@react-three/drei
+npm error     @react-three/drei@"^10.7.7" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error C:\Users\david\AppData\Local\npm-cache\_logs\2026-03-19T23_17_21_624Z-eresolve-report.txt
+npm error A complete log of this run can be found in: C:\Users\david\AppData\Local\npm-cache\_logs\2026-03-19T23_17_21_624Z-debug-0.log
