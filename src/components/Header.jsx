@@ -4,9 +4,9 @@ import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 
 const HEADER_STYLES = { 
-  background: 'rgba(42, 27, 20, 0.95)',
-  borderBottom: '1px solid rgba(215, 204, 200, 0.15)', 
-  backdropFilter: 'blur(8px)',
+  background: 'rgba(5, 7, 10, 0.9)',
+  borderBottom: '1px solid rgba(59, 130, 246, 0.2)', 
+  backdropFilter: 'blur(12px)',
   zIndex: 1100
 };
 

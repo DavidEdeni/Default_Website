@@ -24,11 +24,11 @@ const Footer = () => {
       component="footer"
       id="contact"
       sx={{
-        bgcolor: '#2A1B14',
+        bgcolor: '#05070A',
         pt: 10,
         pb: 8,
-        borderTop: '1px solid rgba(215, 204, 200, 0.1)',
-        color: '#F2EFE9'
+        borderTop: '1px solid rgba(59, 130, 246, 0.1)',
+        color: '#F8FAFC'
       }}
     >
 

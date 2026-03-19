@@ -3,22 +3,22 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#2A1B14', // Deep Walnut
-      contrastText: '#F2EFE9',
+      main: '#3B82F6', // Galaxy Blue
+      contrastText: '#FFFFFF',
     },
     secondary: {
-      main: '#4B3621', // Warm Cocoa
-      light: '#7A624E',
+      main: '#6366F1', // Nebula Indigo
+      light: '#818CF8',
     },
     background: {
-      default: '#F2EFE9', // Sophisticated Creme
-      paper: '#FDFCFB',
+      default: '#05070A', // Deep Space Black
+      paper: '#0F172A',   // Slate 900
     },
     text: {
-      primary: '#2A1B14',
-      secondary: '#4B3621',
+      primary: '#F8FAFC',
+      secondary: '#94A3B8',
     },
-    divider: '#D7CCC8',
+    divider: 'rgba(148, 163, 184, 0.12)',
   },
 
   typography: {
@@ -26,26 +26,27 @@ const theme = createTheme({
     h1: {
       fontWeight: 500,
       letterSpacing: '-0.01em',
-      color: '#2A1B14',
+      color: '#F8FAFC',
     },
     h2: {
       fontWeight: 500,
-      color: '#2A1B14',
+      color: '#F8FAFC',
     },
     h3: {
       fontWeight: 500,
-      color: '#2A1B14',
+      color: '#F8FAFC',
     },
 
     h4: {
       fontWeight: 500,
+      color: '#F8FAFC',
     },
     h5: {
       fontWeight: 600,
       textTransform: 'uppercase',
       letterSpacing: '0.12em',
       fontSize: '0.85rem',
-      color: '#4B3621',
+      color: '#3B82F6',
     },
 
     body1: {
@@ -68,8 +69,8 @@ const theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          backgroundColor: '#F2EFE9',
-          color: '#2A1B14',
+          backgroundColor: '#05070A',
+          color: '#F8FAFC',
         },
 
       },
@@ -77,23 +78,24 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: '2px',
+          borderRadius: '4px',
           padding: '14px 32px',
           transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
         },
         containedPrimary: {
-          backgroundColor: '#2A1B14',
+          backgroundColor: '#3B82F6',
           '&:hover': {
-            backgroundColor: '#1A110D',
+            backgroundColor: '#2563EB',
             transform: 'translateY(-1px)',
+            boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)',
           },
         },
         outlinedPrimary: {
-          borderColor: '#2A1B14',
-          color: '#2A1B14',
+          borderColor: '#3B82F6',
+          color: '#3B82F6',
           '&:hover': {
-            backgroundColor: 'rgba(42, 27, 20, 0.04)',
-            borderColor: '#1A110D',
+            backgroundColor: 'rgba(59, 130, 246, 0.04)',
+            borderColor: '#2563EB',
           },
         },
 
@@ -102,7 +104,8 @@ const theme = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: {
-          borderRadius: '2px',
+          borderRadius: '4px',
+          backgroundImage: 'none',
         },
       },
     },
