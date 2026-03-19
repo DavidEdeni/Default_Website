@@ -2,6 +2,7 @@ import { memo } from 'react';
 import { Box, Container, Typography, Button, Link, Grid } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import logoImg from '../assets/Screenshot 2026-03-14 141610.png';
+import ParticleScene from './ParticleScene';
 
 const HERO_SECTION_STYLES = {
   bgcolor: 'background.default',
@@ -12,7 +13,8 @@ const HERO_SECTION_STYLES = {
   display: 'flex',
   alignItems: 'center',
   position: 'relative',
-  overflow: 'hidden'
+  overflow: 'hidden',
+  background: 'linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)', // Subtle gradient background
 };
 
 const LOGO_IMAGE_STYLES = {
@@ -95,7 +97,8 @@ const QUOTE_STYLES = {
 const Hero = () => {
   return (
     <Box sx={HERO_SECTION_STYLES}>
-      <Container maxWidth="xl">
+      <ParticleScene />
+      <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
         <Grid container spacing={{ xs: 6, md: 10 }} alignItems="center" justifyContent="center">
 
           {/* Left Column: Image */}
