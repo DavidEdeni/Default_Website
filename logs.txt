@@ -1,4 +1,4 @@
---- dev_output.txt ---
+--- logs.txt ---
 
 > ird-pllc@1.0.0 dev
 > vite
