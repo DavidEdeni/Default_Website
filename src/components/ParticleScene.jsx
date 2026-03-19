@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useEffect } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Float } from '@react-three/drei';
 import ParticleSystem from './ParticleSystem';
@@ -9,7 +9,7 @@ import VideocamOffIcon from '@mui/icons-material/VideocamOff';
 
 export default function ParticleScene() {
   const [preset, setPreset] = useState('sphere');
-  const [color, setColor] = useState('#3C2F2F');
+  const [color] = useState('#4D7CFF');
   const [showVideo, setShowVideo] = useState(false);
   const { tension, isDetecting, videoRef } = useHandTracking();
 
@@ -58,7 +58,7 @@ export default function ParticleScene() {
             width: '120px',
             height: '90px',
             borderRadius: '8px',
-            border: '2px solid rgba(60, 47, 47, 0.3)',
+            border: '2px solid rgba(59, 130, 246, 0.3)',
             display: showVideo ? 'block' : 'none',
             marginBottom: '8px'
           }}

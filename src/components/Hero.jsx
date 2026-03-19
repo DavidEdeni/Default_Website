@@ -13,7 +13,7 @@ const HERO_SECTION_STYLES = {
   alignItems: 'center',
   position: 'relative',
   overflow: 'hidden',
-  background: 'linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)', // Subtle gradient background
+  background: 'radial-gradient(circle at 15% 15%, #1e1b4b 0%, #05070a 100%)', // Deep galaxy radial gradient
 };
 
 
@@ -51,15 +51,15 @@ const CONSULT_BUTTON_STYLES = {
   textTransform: 'none',
   fontWeight: 500,
   fontSize: '1rem',
-  bgcolor: '#3C2F2F',
+  bgcolor: '#3B82F6',
   '&:hover': {
-    bgcolor: '#2A1B14',
-    boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
+    bgcolor: '#2563EB',
+    boxShadow: '0 0 20px rgba(59, 130, 246, 0.4)'
   }
 };
 
 const DESCRIPTION_TEXT_STYLES = {
-  color: '#4A6FA5',
+  color: '#93C5FD',
   fontStyle: 'italic',
   fontSize: '1.2rem',
   fontWeight: 400,
@@ -71,7 +71,7 @@ const DESCRIPTION_TEXT_STYLES = {
 
 const QUOTE_STYLES = {
   fontStyle: 'italic',
-  color: '#6e615b', // A slightly lighter brown/gray
+  color: '#94A3B8', // A slightly lighter blue/gray
   fontSize: { xs: '2.5rem', md: '3.5rem' },
   letterSpacing: '0.02em',
   fontWeight: 400,

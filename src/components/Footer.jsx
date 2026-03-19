@@ -35,17 +35,17 @@ const Footer = () => {
       <Container maxWidth="lg">
         <Grid container spacing={4} sx={{ mb: 6 }}>
           <Grid item xs={12} md={6}>
-            <Typography variant="h2" gutterBottom sx={{ fontSize: '1.75rem', fontWeight: 600, color: '#F2EFE9' }}>
+            <Typography variant="h2" gutterBottom sx={{ fontSize: '1.75rem', fontWeight: 600, color: '#F8FAFC' }}>
               Contact
             </Typography>
-            <Typography variant="body1" paragraph sx={{ color: 'rgba(242, 239, 233, 0.7)', maxWidth: '90%' }}>
+            <Typography variant="body1" paragraph sx={{ color: 'rgba(248, 250, 252, 0.7)', maxWidth: '90%' }}>
 
               This work is grounded in clear limits that protect supervision and sound clinical judgment. Communication boundaries are defined. Crisis coverage is not provided. Therapy or supervision is not used as leverage in relational conflict.
             </Typography>
-            <Typography variant="body2" sx={{ fontWeight: 600, mt: 2, color: '#F2EFE9' }}>
+            <Typography variant="body2" sx={{ fontWeight: 600, mt: 2, color: '#F8FAFC' }}>
               Telehealth (Texas)
             </Typography>
-            <Typography variant="body2" sx={{ color: 'rgba(242, 239, 233, 0.7)' }}>
+            <Typography variant="body2" sx={{ color: 'rgba(248, 250, 252, 0.7)' }}>
               Private pay &middot; Superbills available (reimbursement not guaranteed)
             </Typography>
 
@@ -72,7 +72,7 @@ const Footer = () => {
                   sx={{
                     fontSize: '1.1rem',
                     fontWeight: 600,
-                    color: '#F2EFE9',
+                    color: '#F8FAFC',
                     textDecoration: 'underline',
                     '&:hover': { color: 'primary.light' }
                   }}
