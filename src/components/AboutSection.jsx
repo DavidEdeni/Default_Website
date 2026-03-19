@@ -2,13 +2,7 @@ import { memo } from 'react';
 import { Box, Container, Typography, Grid, List, ListItem, ListItemText, Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { Element } from 'react-scroll';
-import hourglassImg from '../assets/8a46ffa53352710009d9cc110eff458f-3.jpg';
 
-const ABOUT_IMAGE_STYLES = {
-  width: '100%',
-  height: 'auto',
-  borderRadius: '2px'
-};
 
 const SECTION_BOX_STYLES = { py: { xs: 12, md: 18 }, bgcolor: 'background.default' };
 const HEADER_TITLE_STYLES = { mb: 8, position: 'relative' };
@@ -38,17 +32,8 @@ const AboutSection = () => {
           <Typography variant="h2" align="center" gutterBottom sx={HEADER_TITLE_STYLES}>
             About / Supervision Fit
           </Typography>
-          <Grid container spacing={8} alignItems="center">
-            <Grid item xs={12} md={6}>
-              <Box
-                component="img"
-                src={hourglassImg}
-                alt="Symmetry symbolized by hourglass"
-                loading="lazy"
-                sx={ABOUT_IMAGE_STYLES}
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
+          <Grid container spacing={8} justifyContent="center">
+            <Grid item xs={12} md={10} lg={8}>
               <Typography variant="h3" gutterBottom sx={SUBHEADER_TITLE_STYLES}>
                 Strong fit if you want
               </Typography>

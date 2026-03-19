@@ -2,12 +2,9 @@ import { memo, useCallback, useEffect } from 'react';
 import { AppBar, Box, Toolbar, Typography, Container, Link } from '@mui/material';
 import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 import { scroller } from 'react-scroll';
-import logo from '../assets/8a46ffa53352710009d9cc110eff458f-0.jpg';
 
 const HEADER_STYLES = { 
-  background: 'linear-gradient(rgba(42, 27, 20, 0.85), rgba(42, 27, 20, 0.85)), url("/src/assets/wood-bg.png")',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
+  background: 'rgba(42, 27, 20, 0.95)',
   borderBottom: '1px solid rgba(215, 204, 200, 0.15)', 
   backdropFilter: 'blur(8px)',
   zIndex: 1100
@@ -19,11 +16,6 @@ const LOGO_BOX_STYLES = {
   alignItems: 'center', 
   textDecoration: 'none', 
   color: 'primary.contrastText' 
-};
-
-const LOGO_IMAGE_STYLES = { 
-  height: { xs: 40, md: 50 }, 
-  mr: 2 
 };
 
 const LOGO_TEXT_STYLES = {
@@ -105,7 +97,6 @@ const Header = () => {
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={TOOLBAR_STYLES}>
           <Box component={RouterLink} to="/" sx={LOGO_BOX_STYLES} aria-label="INTEGRATED RELATIONAL DYNAMICS Home">
-            <Box component="img" src={logo} alt="Integrated Relational Dynamics Logo" sx={LOGO_IMAGE_STYLES} />
             <Typography
               variant="h6"
               sx={LOGO_TEXT_STYLES}

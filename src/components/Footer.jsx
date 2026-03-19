@@ -24,9 +24,7 @@ const Footer = () => {
       component="footer"
       id="contact"
       sx={{
-        background: 'linear-gradient(rgba(42, 27, 20, 0.92), rgba(42, 27, 20, 0.92)), url("/src/assets/wood-bg.png")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        bgcolor: '#2A1B14',
         pt: 10,
         pb: 8,
         borderTop: '1px solid rgba(215, 204, 200, 0.1)',

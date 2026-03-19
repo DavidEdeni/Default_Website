@@ -13,15 +13,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --wood-bg: url('/src/assets/wood-bg.png');
 }
 
 .wood-bg {
-  background-image: linear-gradient(rgba(42, 27, 20, 0.4), rgba(42, 27, 20, 0.4)), var(--wood-bg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #2A1B14;
   color: #F2EFE9;
 }
 

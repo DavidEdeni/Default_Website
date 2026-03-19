@@ -1,7 +1,6 @@
 import { memo } from 'react';
 import { Box, Container, Typography, Grid, Button, List, ListItem, ListItemText } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import treeImg from '../assets/8a46ffa53352710009d9cc110eff458f-2.jpg';
 
 const START_HERE_SECTION_STYLES = {
   bgcolor: 'primary.main',
@@ -9,12 +8,6 @@ const START_HERE_SECTION_STYLES = {
   py: { xs: 12, md: 18 }
 };
 
-const IMAGE_STYLES = {
-  width: '100%',
-  height: 'auto',
-  borderRadius: '2px',
-  opacity: 0.9
-};
 
 const TITLE_STYLES = {
   fontSize: { xs: '2.5rem', md: '3.5rem' },
@@ -67,8 +60,8 @@ const StartHere = () => {
   return (
     <Box component="section" sx={START_HERE_SECTION_STYLES}>
       <Container maxWidth="lg">
-        <Grid container spacing={10} alignItems="center">
-          <Grid item xs={12} md={7}>
+        <Grid container spacing={10} justifyContent="center">
+          <Grid item xs={12} md={10} lg={8}>
             <Typography variant="h2" sx={TITLE_STYLES}>
               Start Here: Supervision Fit Consult
             </Typography>
@@ -105,15 +98,6 @@ const StartHere = () => {
             </Button>
           </Grid>
           
-          <Grid item xs={12} md={5}>
-            <Box
-              component="img"
-              src={treeImg}
-              alt="Deeply rooted tree"
-              loading="lazy"
-              sx={IMAGE_STYLES}
-            />
-          </Grid>
         </Grid>
       </Container>
     </Box>

@@ -1,17 +1,6 @@
 import { memo } from 'react';
 import { Box, Container, Typography, Grid, List, ListItem, ListItemText } from '@mui/material';
-import hourglassImg from '../assets/hourglass.png';
 
-const HELP_IMAGE_STYLES = {
-  width: '100%',
-  maxHeight: { xs: '450px', md: '750px' },
-  objectFit: 'contain',
-  display: 'block',
-  margin: '0 auto',
-  mixBlendMode: 'multiply',
-  filter: 'sepia(0.1) contrast(1.1)',
-  opacity: 0.95
-};
 
 const HELP_LIST_ITEM_STYLES = { alignItems: 'flex-start', py: 1.5 };
 
@@ -31,17 +20,8 @@ const HelpAreas = () => {
   return (
     <Box sx={SECTION_WRAPPER_STYLES}>
       <Container maxWidth="lg">
-        <Grid container spacing={8} alignItems="center">
-          <Grid item xs={12} md={7}>
-            <Box
-              component="img"
-              src={hourglassImg}
-              alt="Elegant hourglass"
-              loading="lazy"
-              sx={HELP_IMAGE_STYLES}
-            />
-          </Grid>
-          <Grid item xs={12} md={5}>
+        <Grid container spacing={8} justifyContent="center">
+          <Grid item xs={12} md={10} lg={8}>
             <Typography variant="body1" sx={DESCRIPTION_TEXT_STYLES}>
               This work helps clinicians and clients name what is true, clarify what they are responsible for carrying, and identify sustainable next steps—without coercion, control, or performance pressure.
             </Typography>

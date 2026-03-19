@@ -1,7 +1,6 @@
 import { memo } from 'react';
 import { Box, Container, Typography, Button, Link, Grid } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import logoImg from '../assets/logo.png';
 import ParticleScene from './ParticleScene';
 
 const HERO_SECTION_STYLES = {
@@ -17,17 +16,6 @@ const HERO_SECTION_STYLES = {
   background: 'linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)', // Subtle gradient background
 };
 
-const LOGO_IMAGE_STYLES = {
-  width: '100%',
-  maxWidth: { xs: '450px', md: '600px' }, // Made image slightly larger
-  height: 'auto',
-  display: 'block',
-  position: 'relative',
-  left: { xs: 0, md: '40px' }, // Shifted exactly 40px left from base position
-  top: { xs: 0, md: '-175px' }, // Shifted exactly  175px up from base position
-  mixBlendMode: 'multiply', // blends the white background with the theme background
-  filter: 'contrast(1.4) saturate(1.1) brightness(0.9) drop-shadow(15px 15px 20px rgba(0,0,0,0.8))' // Darker Bottom-right shadow
-};
 
 const SUBTITLE_STYLES = {
   letterSpacing: '0.15em',
@@ -56,14 +44,14 @@ const NAME_STYLES = {
 
 const CONSULT_BUTTON_STYLES = {
   mt: 2,
-  mb: 6,
-  borderRadius: '4px', // Slightly sharper corners based on image
+  mb: 4,
+  borderRadius: '4px',
   padding: '12px 36px',
   boxShadow: 'none',
   textTransform: 'none',
   fontWeight: 500,
   fontSize: '1rem',
-  bgcolor: '#3C2F2F', // Dark wood brown matching the quote
+  bgcolor: '#3C2F2F',
   '&:hover': {
     bgcolor: '#2A1B14',
     boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
@@ -71,16 +59,13 @@ const CONSULT_BUTTON_STYLES = {
 };
 
 const DESCRIPTION_TEXT_STYLES = {
-  color: '#4A6FA5', // Muted blue as seen in the screenshot
+  color: '#4A6FA5',
   fontStyle: 'italic',
   fontSize: '1.2rem',
   fontWeight: 400,
   maxWidth: '600px',
   mx: 'auto',
   lineHeight: 1.6,
-  mt: '300px', // Original margin
-  position: 'relative',
-  top: '-165px', // Shifted up 120px independently
   mb: 10
 };
 
@@ -99,20 +84,8 @@ const Hero = () => {
     <Box sx={HERO_SECTION_STYLES}>
       <ParticleScene />
       <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
-        <Grid container spacing={{ xs: 6, md: 10 }} alignItems="center" justifyContent="center">
-
-          {/* Left Column: Image */}
-          <Grid item xs={12} md={5} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' } }}>
-            <Box
-              component="img"
-              src={logoImg}
-              alt="Integrated Relational Dynamics Logo"
-              sx={LOGO_IMAGE_STYLES}
-            />
-          </Grid>
-
-          {/* Right Column: Text Content */}
-          <Grid item xs={12} md={7} sx={{ textAlign: 'center', px: { md: 4 } }}>
+          {/* Centered Text Content */}
+          <Grid item xs={12} md={10} lg={8} sx={{ textAlign: 'center', px: { md: 4 } }}>
             <Typography variant="h6" sx={SUBTITLE_STYLES}>
               Supervision • Consulting • Therapy
             </Typography>
@@ -142,7 +115,7 @@ const Hero = () => {
               <LinkRouter to="/therapy" label="Therapy +" />
             </Box>
 
-            <Typography variant="body1" sx={DESCRIPTION_TEXT_STYLES}>
+            <Typography variant="body1" sx={{ ...DESCRIPTION_TEXT_STYLES, mt: 4 }}>
               A practice based on <span style={{ textDecoration: 'underline' }}>naming truth</span> that <span style={{ textDecoration: 'underline' }}>helps</span> clarify <span style={{ textDecoration: 'underline' }}>what belongs to you</span> and what does not, without forcing repair, control, or closure
             </Typography>
 
@@ -151,8 +124,6 @@ const Hero = () => {
             </Typography>
 
           </Grid>
-
-        </Grid>
       </Container>
     </Box>
   );
