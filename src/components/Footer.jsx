@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Container, Typography, Grid, Link, Divider, Stack } from '@mui/material';
 import { useNavigate, useLocation, Link as RouterLink } from 'react-router-dom';
 import { scroller } from 'react-scroll';
@@ -21,15 +20,15 @@ const Footer = () => {
   };
 
   return (
-    <Box 
-      component="footer" 
-      id="contact" 
-      sx={{ 
+    <Box
+      component="footer"
+      id="contact"
+      sx={{
         background: 'linear-gradient(rgba(42, 27, 20, 0.92), rgba(42, 27, 20, 0.92)), url("/src/assets/wood-bg.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        pt: 10, 
-        pb: 8, 
+        pt: 10,
+        pb: 8,
         borderTop: '1px solid rgba(215, 204, 200, 0.1)',
         color: '#F2EFE9'
       }}
@@ -95,23 +94,23 @@ const Footer = () => {
             <FooterLink to="/policies" label="Policies" />
             <FooterLink to="/fees" label="Fees" />
             <FooterLink to="/resources" label="Resources" />
-            <Link 
+            <Link
               component="button"
               onClick={() => handleNavClick('contact')}
-              sx={{ 
-                fontSize: '0.85rem', 
-                color: 'text.secondary', 
+              sx={{
+                fontSize: '0.85rem',
+                color: 'text.secondary',
                 cursor: 'pointer',
-                textDecoration: 'none', 
-                '&:hover': { color: 'primary.main' } 
+                textDecoration: 'none',
+                '&:hover': { color: 'primary.main' }
               }}
             >
               Contact
             </Link>
           </Stack>
-          
+
           <Typography variant="body2" sx={{ fontSize: '0.8rem', color: 'rgba(242, 239, 233, 0.5)' }}>
-            &copy; {new Date().getFullYear()} Integrated Relational Dynamics, PLLC. All rights reserved.
+            &copy; {new Date().getFullYear()} Kotia K. Whitaker, LMFT-S. All rights reserved.
           </Typography>
 
         </Box>

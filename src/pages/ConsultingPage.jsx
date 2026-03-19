@@ -51,7 +51,7 @@ const ConsultingPage = () => {
           <Box
             component="img"
             src={woodLogoImg}
-            alt="Integrated Relational Dynamics Logo"
+            alt="Kotia K. Whitaker Logo"
             sx={{ maxWidth: '400px', width: '100%', height: 'auto', borderRadius: '2px', opacity: 0.9 }}
           />
         </Box>

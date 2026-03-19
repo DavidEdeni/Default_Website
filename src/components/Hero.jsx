@@ -106,7 +106,7 @@ const Hero = () => {
             <Box
               component="img"
               src={logoImg}
-              alt="Integrated Relational Dynamics Logo"
+              alt="Kotia K. Whitaker Logo"
               sx={LOGO_IMAGE_STYLES}
             />
           </Grid>
@@ -118,11 +118,11 @@ const Hero = () => {
             </Typography>
 
             <Typography variant="h1" sx={TITLE_STYLES}>
-              Integrated Relational<br />Dynamics
+              Kotia K. Whitaker,<br />LMFT-S
             </Typography>
 
             <Typography variant="h4" sx={NAME_STYLES}>
-              Kotia K. Whitaker, LMFT-S
+              Clinical Supervision & Consulting
             </Typography>
 
             <Button

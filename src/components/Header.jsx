@@ -104,13 +104,13 @@ const Header = () => {
     <AppBar position="sticky" elevation={0} sx={HEADER_STYLES}>
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={TOOLBAR_STYLES}>
-          <Box component={RouterLink} to="/" sx={LOGO_BOX_STYLES} aria-label="INTEGRATED RELATIONAL DYNAMICS Home">
-            <Box component="img" src={logo} alt="IRD Logo" sx={LOGO_IMAGE_STYLES} />
+          <Box component={RouterLink} to="/" sx={LOGO_BOX_STYLES} aria-label="KOTIA K. WHITAKER Home">
+            <Box component="img" src={logo} alt="Kotia K. Whitaker Logo" sx={LOGO_IMAGE_STYLES} />
             <Typography
               variant="h6"
               sx={LOGO_TEXT_STYLES}
             >
-              INTEGRATED RELATIONAL DYNAMICS, PLLC
+              KOTIA K. WHITAKER, LMFT-S
             </Typography>
           </Box>
 
