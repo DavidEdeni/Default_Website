@@ -1,6 +1,5 @@
 import { memo } from 'react';
 import { Box, Container, Typography, Grid, Button, Divider } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
 import { Element } from 'react-scroll';
 
 const services = [
@@ -8,21 +7,18 @@ const services = [
     title: 'Supervision',
     description: 'Ethical judgment under pressure: conceptualization, documentation strength, boundary clarity, and responsibility when costs rise.',
     status: 'Accepting now (telehealth).',
-    exploreLink: '/supervision',
     isPrimary: true
   },
   {
     title: 'Therapy',
     description: 'Structured, values-informed psychotherapy for adults, couples, and adolescents navigating anxiety, burnout, conflict cycles, and high-stakes decisions—without outcome guarantees.',
     status: 'Begins October 2026 (telehealth).',
-    exploreLink: '/therapy',
     isPrimary: false
   },
   {
     title: 'Consulting',
     description: 'Consulting for individuals or organizations navigating role clarity, decision pressure, and responsibility under strain—especially when decisions feel high-stakes or stuck.',
     status: 'Accepting now (remote).',
-    exploreLink: '/consulting',
     isPrimary: false
   }
 ];
@@ -59,27 +55,6 @@ const Services = () => {
                     {service.description}
                   </Typography>
                   
-                  <Box>
-                    <Button
-                      component={RouterLink}
-                      to={service.exploreLink}
-                      variant="outlined"
-                      sx={{ 
-                        textTransform: 'uppercase', 
-                        fontSize: '0.75rem', 
-                        letterSpacing: '0.15em',
-                        px: 4,
-                        py: 1.5,
-                        borderColor: 'primary.main',
-                        '&:hover': {
-                          bgcolor: 'primary.main',
-                          color: 'primary.contrastText'
-                        }
-                      }}
-                    >
-                      Explore {service.title} +
-                    </Button>
-                  </Box>
                 </Box>
                 {index < services.length - 1 && (
                   <Divider sx={{ my: 6, opacity: 0.1, maxWidth: '200px', mx: 'auto' }} />

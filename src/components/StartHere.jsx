@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { Box, Container, Typography, Grid, Button, List, ListItem, ListItemText } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 
 const START_HERE_SECTION_STYLES = {
   bgcolor: 'primary.main',
@@ -88,8 +88,14 @@ const StartHere = () => {
             </List>
 
             <Button
-              component={RouterLink}
-              to="/supervision-fit"
+              onClick={() => {
+                scroller.scrollTo('contact', {
+                  duration: 500,
+                  delay: 0,
+                  smooth: 'easeInOutQuart',
+                  offset: -70
+                });
+              }}
               variant="contained"
               sx={CTA_BUTTON_STYLES}
               aria-label="Request a Supervision Fit Consultation"
