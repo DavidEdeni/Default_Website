@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Box, Container, Typography, Button, Link, Grid } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import logoImg from '../assets/Screenshot 2026-03-14 141610.png';
+import logoImg from '../assets/logo.png';
 import ParticleScene from './ParticleScene';
 
 const HERO_SECTION_STYLES = {
