@@ -84,7 +84,7 @@ const AboutSection = () => {
               </List>
 
               <Typography variant="body1" sx={ITALIC_TEXT_STYLES}>
-                If this isn’t the right fit, I’ll help you identify a better match.
+                If this isn’t the right fit, we’ll help you identify a better match.
               </Typography>
 
               <Box sx={LINK_WRAPPER_STYLES}>

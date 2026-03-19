@@ -110,7 +110,7 @@ const Footer = () => {
           </Stack>
 
           <Typography variant="body2" sx={{ fontSize: '0.8rem', color: 'rgba(242, 239, 233, 0.5)' }}>
-            &copy; {new Date().getFullYear()} Kotia K. Whitaker, LMFT-S. All rights reserved.
+            &copy; {new Date().getFullYear()} Integrated Relational Dynamics, PLLC. All rights reserved.
           </Typography>
 
         </Box>
