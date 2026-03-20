@@ -63,23 +63,23 @@ const StartHere = () => {
         <Grid container spacing={10} justifyContent="center">
           <Grid item xs={12} md={10} lg={8}>
             <Typography variant="h2" sx={TITLE_STYLES}>
-              Start Here: Supervision Fit Consult
+              
             </Typography>
             
             <Typography variant="body1" sx={BODY_TEXT_STYLES}>
-              Supervision is not a commodity—it is a frame. It works best when the frame is stable and the focus is clear.
+              
             </Typography>
 
             <Typography variant="h6" sx={{ mb: 3, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'secondary.light', fontSize: '0.85rem' }}>
-              Your current context:
+              
             </Typography>
 
             <List sx={{ mb: 4 }}>
               {[
-                "You’re a clinician in private practice, an agency, or a group setting.",
-                "You need a supervisor who values conceptualization support and documentation strength.",
-                "You want someone who won’t co-sign decisions without shared reasoning.",
-                "You value a steady pace of responsibility over a cycle of urgency."
+                "",
+                "",
+                "",
+                ""
               ].map((item, idx) => (
                 <ListItem key={idx} disableGutters sx={BULLET_POINT_STYLES}>
                   <ListItemText primary={item} />
@@ -98,9 +98,9 @@ const StartHere = () => {
               }}
               variant="contained"
               sx={CTA_BUTTON_STYLES}
-              aria-label="Request a Supervision Fit Consultation"
+              aria-label=""
             >
-              Request a Consultation +
+              
             </Button>
           </Grid>
           

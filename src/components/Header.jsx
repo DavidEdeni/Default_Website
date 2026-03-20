@@ -96,19 +96,19 @@ const Header = () => {
     <AppBar position="sticky" elevation={0} sx={HEADER_STYLES}>
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={TOOLBAR_STYLES}>
-          <Box component={RouterLink} to="/" sx={LOGO_BOX_STYLES} aria-label="INTEGRATED RELATIONAL DYNAMICS Home">
+          <Box component={RouterLink} to="/" sx={LOGO_BOX_STYLES} aria-label="">
             <Typography
               variant="h6"
               sx={LOGO_TEXT_STYLES}
             >
-              INTEGRATED RELATIONAL DYNAMICS
+              
             </Typography>
           </Box>
 
           <Box component="nav" sx={NAV_BOX_STYLES}>
-            <NavItem onClick={() => handleNavClick('services')} label="Services" ariaLabel="Scroll to Services section" />
-            <NavItem onClick={() => handleNavClick('about')} label="About" ariaLabel="Scroll to About section" />
-            <NavItem onClick={() => handleNavClick('contact')} label="Contact" ariaLabel="Scroll to Contact section" />
+            <NavItem onClick={() => handleNavClick('services')} label="" ariaLabel="" />
+            <NavItem onClick={() => handleNavClick('about')} label="" ariaLabel="" />
+            <NavItem onClick={() => handleNavClick('contact')} label="" ariaLabel="" />
           </Box>
         </Toolbar>
       </Container>

@@ -87,15 +87,15 @@ const Hero = () => {
           {/* Centered Text Content */}
           <Grid item xs={12} md={10} lg={8} sx={{ textAlign: 'center', px: { md: 4 } }}>
             <Typography variant="h6" sx={SUBTITLE_STYLES}>
-              Supervision • Consulting • Therapy
+              
             </Typography>
 
             <Typography variant="h1" sx={TITLE_STYLES}>
-              Integrated Relational<br />Dynamics
+              <br />
             </Typography>
 
             <Typography variant="h4" sx={NAME_STYLES}>
-              Clinical Supervision & Consulting
+              
             </Typography>
 
             <Button
@@ -103,19 +103,19 @@ const Hero = () => {
               variant="contained"
               size="large"
               sx={CONSULT_BUTTON_STYLES}
-              aria-label="Request a Consultation"
+              aria-label=""
             >
-              Request a Consultation
+              
             </Button>
 
 
 
             <Typography variant="body1" sx={{ ...DESCRIPTION_TEXT_STYLES, mt: 4 }}>
-              A practice based on <span style={{ textDecoration: 'underline' }}>naming truth</span> that <span style={{ textDecoration: 'underline' }}>helps</span> clarify <span style={{ textDecoration: 'underline' }}>what belongs to you</span> and what does not, without forcing repair, control, or closure
+              
             </Typography>
 
             <Typography variant="h3" sx={QUOTE_STYLES}>
-              Clarity without Coercion
+              
             </Typography>
 
           </Grid>

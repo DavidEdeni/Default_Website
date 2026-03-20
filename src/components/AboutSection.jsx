@@ -29,46 +29,46 @@ const AboutSection = () => {
       <Element name="about" id="about">
         <Container maxWidth="lg">
           <Typography variant="h2" align="center" gutterBottom sx={HEADER_TITLE_STYLES}>
-            About / Supervision Fit
+            
           </Typography>
           <Grid container spacing={8} justifyContent="center">
             <Grid item xs={12} md={10} lg={8}>
               <Typography variant="h3" gutterBottom sx={SUBHEADER_TITLE_STYLES}>
-                Strong fit if you want
+                
               </Typography>
               <List sx={{ mb: 4 }}>
                 {[
-                  "Clear supervision frame: goals, expectations, boundaries",
-                  "Conceptualization support that holds under pressure",
-                  "Documentation strength (clarity, risk thinking, defensibility)",
-                  "Ethical judgment when roles and stakes collide",
-                  "A steady pace: responsibility over urgency"
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ].map((item, idx) => (
                   <ListItem key={idx} disableGutters sx={ITEM_TEXT_STYLES}>
-                    <ListItemText primary={<Typography variant="body1" color="text.secondary">&bull; {item}</Typography>} />
+                    <ListItemText primary={<Typography variant="body1" color="text.secondary">{item}</Typography>} />
                   </ListItem>
                 ))}
               </List>
 
               <Typography variant="h3" gutterBottom sx={SUBHEADER_TITLE_STYLES}>
-                May not be a fit if you need
+                
               </Typography>
               <List sx={{ mb: 4 }}>
                 {[
-                  "Crisis supervision or on-demand availability",
-                  "A supervisor who co-signs decisions without reasoning",
-                  "Shortcut notes, templates-as-cover, or outcome guarantees",
-                  "Supervision used to pressure someone else",
-                  "A plan built on urgency rather than ownership"
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
                 ].map((item, idx) => (
                   <ListItem key={idx} disableGutters sx={ITEM_TEXT_STYLES}>
-                    <ListItemText primary={<Typography variant="body1" color="text.secondary">&bull; {item}</Typography>} />
+                    <ListItemText primary={<Typography variant="body1" color="text.secondary">{item}</Typography>} />
                   </ListItem>
                 ))}
               </List>
 
               <Typography variant="body1" sx={ITALIC_TEXT_STYLES}>
-                If this isn’t the right fit, we’ll help you identify a better match.
+                
               </Typography>
 
               <Box sx={LINK_WRAPPER_STYLES}>
@@ -91,9 +91,9 @@ const AboutSection = () => {
                     borderBottom: CTA_LINK_STYLES.borderBottom,
                     display: 'inline-block'
                   }}
-                  aria-label="Request a Supervision Fit Consultation"
+                  aria-label=""
                 >
-                  Request a Supervision Fit Consult +
+                  
                 </Link>
               </Box>
             </Grid>

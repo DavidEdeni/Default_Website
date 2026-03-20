@@ -1,24 +1,24 @@
 import { memo } from 'react';
-import { Box, Container, Typography, Grid, Button, Divider } from '@mui/material';
+import { Box, Container, Typography, Grid, Divider } from '@mui/material';
 import { Element } from 'react-scroll';
 
 const services = [
   {
-    title: 'Supervision',
-    description: 'Ethical judgment under pressure: conceptualization, documentation strength, boundary clarity, and responsibility when costs rise.',
-    status: 'Accepting now (telehealth).',
+    title: '',
+    description: '',
+    status: '',
     isPrimary: true
   },
   {
-    title: 'Therapy',
-    description: 'Structured, values-informed psychotherapy for adults, couples, and adolescents navigating anxiety, burnout, conflict cycles, and high-stakes decisions—without outcome guarantees.',
-    status: 'Begins October 2026 (telehealth).',
+    title: '',
+    description: '',
+    status: '',
     isPrimary: false
   },
   {
-    title: 'Consulting',
-    description: 'Consulting for individuals or organizations navigating role clarity, decision pressure, and responsibility under strain—especially when decisions feel high-stakes or stuck.',
-    status: 'Accepting now (remote).',
+    title: '',
+    description: '',
+    status: '',
     isPrimary: false
   }
 ];
@@ -40,7 +40,7 @@ const Services = () => {
       <Element name="services" id="services">
         <Container maxWidth="lg">
           <Typography variant="h2" align="center" sx={{ mb: 10, position: 'relative' }}>
-            Services
+            
           </Typography>
           <Grid container spacing={6} justifyContent="center">
             {services.map((service, index) => (
