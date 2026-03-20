@@ -15,6 +15,11 @@ import '@fontsource/inter/600.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div style={{ color: 'white' }}>Hello AetherFlow</div>
+    <ErrorBoundary>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <App />
+      </ThemeProvider>
+    </ErrorBoundary>
   </React.StrictMode>
 )

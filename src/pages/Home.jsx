@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box } from '@mui/material';
 import Hero from '../components/Hero';
 import HelpAreas from '../components/HelpAreas';
@@ -10,10 +9,10 @@ const Home = () => {
   return (
     <Box>
       <Hero />
-      {/* <HelpAreas />
+      <HelpAreas />
       <StartHere />
       <Services />
-      <AboutSection /> */}
+      <AboutSection />
     </Box>
   );
 };
