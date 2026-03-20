@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { Box, Container, Typography, Grid, List, ListItem, ListItemText, Link } from '@mui/material';
-import { scroller, Element } from 'react-scroll';
+import { Box, Container, Typography, Grid } from '@mui/material';
+import { Element } from 'react-scroll';
 
 
 const SECTION_BOX_STYLES = { py: { xs: 15, md: 20 }, bgcolor: '#05070A' };
