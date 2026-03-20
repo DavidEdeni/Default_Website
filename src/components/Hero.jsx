@@ -62,7 +62,7 @@ const Hero = () => {
     <Box sx={HERO_SECTION_STYLES}>
 
       <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
-          {/* Centered Text Content */}
+        <Grid container spacing={0} justifyContent="center">
           <Grid item xs={12} md={10} lg={8} sx={{ textAlign: 'center', px: { md: 4 } }}>
             <Typography variant="h5" sx={SUBTITLE_STYLES}>
               Next-Gen Infrastructure
@@ -96,6 +96,7 @@ const Hero = () => {
             </Box>
 
           </Grid>
+        </Grid>
       </Container>
     </Box>
   );

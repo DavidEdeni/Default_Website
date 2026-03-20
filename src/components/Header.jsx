@@ -8,9 +8,6 @@ const HEADER_STYLES = {
   borderBottom: '1px solid rgba(255, 255, 255, 0.05)', 
   backdropFilter: 'blur(20px)',
   zIndex: 1100,
-  position: 'fixed',
-  top: 0,
-  width: '100%',
 };
 
 
@@ -88,14 +85,13 @@ const Header = () => {
           smooth: 'easeInOutQuart',
           offset: -70
         });
-        window.history.replaceState({}, document.title, "/");
-      }, 150); // Increased slightly for stability
+      }, 150);
       return () => clearTimeout(timer);
     }
   }, [location.pathname, location.search]);
 
   return (
-    <AppBar position="sticky" elevation={0} sx={HEADER_STYLES}>
+    <AppBar position="fixed" elevation={0} sx={HEADER_STYLES}>
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={TOOLBAR_STYLES}>
           <Box component={RouterLink} to="/" sx={LOGO_BOX_STYLES} aria-label="AetherFlow Home">
