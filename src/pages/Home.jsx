@@ -10,10 +10,10 @@ const Home = () => {
   return (
     <Box>
       <Hero />
-      <HelpAreas />
+      {/* <HelpAreas />
       <StartHere />
       <Services />
-      <AboutSection />
+      <AboutSection /> */}
     </Box>
   );
 };
