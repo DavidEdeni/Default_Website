@@ -4,10 +4,13 @@ import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 
 const HEADER_STYLES = { 
-  background: 'rgba(5, 7, 10, 0.9)',
-  borderBottom: '1px solid rgba(59, 130, 246, 0.2)', 
-  backdropFilter: 'blur(12px)',
-  zIndex: 1100
+  background: 'rgba(5, 7, 10, 0.7)',
+  borderBottom: '1px solid rgba(255, 255, 255, 0.05)', 
+  backdropFilter: 'blur(20px)',
+  zIndex: 1100,
+  position: 'fixed',
+  top: 0,
+  width: '100%',
 };
 
 
@@ -19,12 +22,13 @@ const LOGO_BOX_STYLES = {
 };
 
 const LOGO_TEXT_STYLES = {
-  fontWeight: 500,
-  fontSize: { xs: '0.9rem', md: '1.1rem' },
-  letterSpacing: '0.1em',
-  lineHeight: 1.2,
-  color: '#FFF',
-  display: { xs: 'none', sm: 'block' }
+  fontWeight: 800,
+  fontSize: '1.25rem',
+  letterSpacing: '-0.02em',
+  background: 'linear-gradient(135deg, #06B6D4 0%, #8B5CF6 100%)',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  display: 'block'
 };
 
 const TOOLBAR_STYLES = { 
@@ -39,21 +43,19 @@ const NAV_BOX_STYLES = {
 };
 
 const NAV_ITEM_STYLES = {
-  color: '#FFF',
-  fontSize: '0.8rem',
+  color: 'rgba(248, 250, 252, 0.7)',
+  fontSize: '0.875rem',
   fontWeight: 500,
-  textTransform: 'uppercase',
-  letterSpacing: '0.15em',
+  textTransform: 'none',
+  letterSpacing: '0.01em',
   textDecoration: 'none',
   cursor: 'pointer',
   border: 'none',
   bgcolor: 'transparent',
   p: 0,
-  transition: 'all 0.3s ease',
+  transition: 'all 0.2s ease',
   '&:hover': {
-    color: '#FFF',
-    transform: 'translateY(-1px)',
-    textDecoration: 'underline'
+    color: '#06B6D4',
   }
 };
 
@@ -96,19 +98,20 @@ const Header = () => {
     <AppBar position="sticky" elevation={0} sx={HEADER_STYLES}>
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={TOOLBAR_STYLES}>
-          <Box component={RouterLink} to="/" sx={LOGO_BOX_STYLES} aria-label="">
+          <Box component={RouterLink} to="/" sx={LOGO_BOX_STYLES} aria-label="AetherFlow Home">
             <Typography
               variant="h6"
               sx={LOGO_TEXT_STYLES}
             >
-              
+              AetherFlow
             </Typography>
           </Box>
 
           <Box component="nav" sx={NAV_BOX_STYLES}>
-            <NavItem onClick={() => handleNavClick('services')} label="" ariaLabel="" />
-            <NavItem onClick={() => handleNavClick('about')} label="" ariaLabel="" />
-            <NavItem onClick={() => handleNavClick('contact')} label="" ariaLabel="" />
+            <NavItem onClick={() => handleNavClick('features')} label="Features" ariaLabel="Scroll to Features" />
+            <NavItem onClick={() => handleNavClick('solutions')} label="Solutions" ariaLabel="Scroll to Solutions" />
+            <NavItem onClick={() => handleNavClick('infrastructure')} label="Infrastructure" ariaLabel="Scroll to Infrastructure" />
+            <NavItem onClick={() => handleNavClick('contact')} label="Contact" ariaLabel="Scroll to Contact" />
           </Box>
         </Toolbar>
       </Container>

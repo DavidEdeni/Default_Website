@@ -3,37 +3,43 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#3B82F6', // Galaxy Blue
+      main: '#06B6D4', // Cyan Glow
       contrastText: '#FFFFFF',
     },
     secondary: {
-      main: '#6366F1', // Nebula Indigo
-      light: '#818CF8',
+      main: '#8B5CF6', // Neon Purple
+      light: '#A78BFA',
     },
     background: {
       default: '#05070A', // Deep Space Black
-      paper: '#0F172A',   // Slate 900
+      paper: 'rgba(15, 23, 42, 0.8)',   // Slate 900 with transparency for glassmorphism
     },
     text: {
       primary: '#F8FAFC',
       secondary: '#94A3B8',
     },
-    divider: 'rgba(148, 163, 184, 0.12)',
+    divider: 'rgba(6, 182, 212, 0.1)',
   },
 
   typography: {
     fontFamily: '"Inter", "system-ui", sans-serif',
     h1: {
-      fontWeight: 500,
-      letterSpacing: '-0.01em',
+      fontWeight: 800,
+      letterSpacing: '-0.04em',
+      fontSize: 'clamp(3rem, 8vw, 5rem)',
+      lineHeight: 1.1,
       color: '#F8FAFC',
     },
     h2: {
-      fontWeight: 500,
+      fontWeight: 700,
+      letterSpacing: '-0.02em',
+      fontSize: 'clamp(2rem, 5vw, 3.5rem)',
       color: '#F8FAFC',
     },
     h3: {
-      fontWeight: 500,
+      fontWeight: 600,
+      letterSpacing: '-0.01em',
+      fontSize: '2rem',
       color: '#F8FAFC',
     },
 
@@ -42,27 +48,28 @@ const theme = createTheme({
       color: '#F8FAFC',
     },
     h5: {
-      fontWeight: 600,
+      fontWeight: 700,
       textTransform: 'uppercase',
-      letterSpacing: '0.12em',
-      fontSize: '0.85rem',
-      color: '#3B82F6',
+      letterSpacing: '0.2em',
+      fontSize: '0.75rem',
+      color: '#06B6D4',
     },
 
     body1: {
-      fontSize: '1.1rem',
-      lineHeight: 1.8,
+      fontSize: '1.125rem',
+      lineHeight: 1.6,
       fontWeight: 400,
+      color: '#94A3B8',
     },
     body2: {
-      fontSize: '0.95rem',
-      lineHeight: 1.7,
+      fontSize: '0.875rem',
+      lineHeight: 1.5,
       fontWeight: 400,
     },
     button: {
-      fontWeight: 500,
+      fontWeight: 600,
       textTransform: 'none',
-      letterSpacing: '0.05em',
+      letterSpacing: '0.02em',
     },
   },
   components: {
@@ -71,41 +78,48 @@ const theme = createTheme({
         body: {
           backgroundColor: '#05070A',
           color: '#F8FAFC',
+          '& ::selection': {
+            backgroundColor: 'rgba(6, 182, 212, 0.3)',
+            color: '#FFF',
+          },
         },
-
       },
     },
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: '4px',
-          padding: '14px 32px',
-          transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+          borderRadius: '8px',
+          padding: '12px 24px',
+          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         },
         containedPrimary: {
-          backgroundColor: '#3B82F6',
+          background: 'linear-gradient(135deg, #06B6D4 0%, #0891B2 100%)',
+          boxShadow: '0 4px 20px rgba(6, 182, 212, 0.2)',
           '&:hover': {
-            backgroundColor: '#2563EB',
-            transform: 'translateY(-1px)',
-            boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)',
+            background: 'linear-gradient(135deg, #22D3EE 0%, #06B6D4 100%)',
+            transform: 'translateY(-2px)',
+            boxShadow: '0 8px 30px rgba(6, 182, 212, 0.4)',
           },
         },
         outlinedPrimary: {
-          borderColor: '#3B82F6',
-          color: '#3B82F6',
+          borderColor: 'rgba(6, 182, 212, 0.5)',
+          color: '#06B6D4',
           '&:hover': {
-            backgroundColor: 'rgba(59, 130, 246, 0.04)',
-            borderColor: '#2563EB',
+            backgroundColor: 'rgba(6, 182, 212, 0.05)',
+            borderColor: '#06B6D4',
+            transform: 'translateY(-1px)',
           },
         },
-
       },
     },
     MuiPaper: {
       styleOverrides: {
         root: {
-          borderRadius: '4px',
+          borderRadius: '16px',
           backgroundImage: 'none',
+          backgroundColor: 'rgba(15, 23, 42, 0.6)',
+          backdropFilter: 'blur(12px)',
+          border: '1px solid rgba(255, 255, 255, 0.05)',
         },
       },
     },
