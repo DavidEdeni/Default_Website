@@ -4,79 +4,57 @@ import { scroller } from 'react-scroll';
 
 
 const HERO_SECTION_STYLES = {
-  bgcolor: 'background.default',
+  bgcolor: '#05070A',
   color: 'text.primary',
-  pt: { xs: 5, md: 7 },
-  pb: { xs: 8, md: 12 },
-  minHeight: '85vh',
+  pt: { xs: 15, md: 25 },
+  pb: { xs: 12, md: 20 },
+  minHeight: '100vh',
   display: 'flex',
   alignItems: 'center',
   position: 'relative',
   overflow: 'hidden',
-  background: 'radial-gradient(circle at 15% 15%, #1e1b4b 0%, #05070a 100%)', // Deep galaxy radial gradient
+  background: 'radial-gradient(circle at 20% 30%, rgba(6, 182, 212, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 50%), #05070A',
 };
 
 
 const SUBTITLE_STYLES = {
-  letterSpacing: '0.15em',
-  fontWeight: 600,
-  color: 'secondary.light',
-  fontSize: '0.85rem',
-  mb: 3,
-  textTransform: 'uppercase'
+  letterSpacing: '0.4em',
+  fontWeight: 700,
+  color: 'primary.main',
+  fontSize: '0.75rem',
+  mb: 4,
+  textTransform: 'uppercase',
+  opacity: 0.8
 };
 
 const TITLE_STYLES = {
-  fontSize: { xs: '3rem', md: '4.5rem' },
-  fontWeight: 500,
-  mb: 2,
-  lineHeight: 1.1,
-  color: 'primary.main'
-};
-
-const NAME_STYLES = {
-  color: 'text.secondary',
-  fontWeight: 400,
-  fontSize: { xs: '1.4rem', md: '1.6rem' },
-  fontStyle: 'italic',
-  mb: 4
-};
-
-const CONSULT_BUTTON_STYLES = {
-  mt: 2,
-  mb: 4,
-  borderRadius: '4px',
-  padding: '12px 36px',
-  boxShadow: 'none',
-  textTransform: 'none',
-  fontWeight: 500,
-  fontSize: '1rem',
-  bgcolor: '#3B82F6',
-  '&:hover': {
-    bgcolor: '#2563EB',
-    boxShadow: '0 0 20px rgba(59, 130, 246, 0.4)'
-  }
+  fontSize: { xs: '3.5rem', md: '5.5rem' },
+  fontWeight: 800,
+  mb: 3,
+  lineHeight: 1,
+  background: 'linear-gradient(to bottom, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 100%)',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  maxWidth: '900px',
+  mx: 'auto'
 };
 
 const DESCRIPTION_TEXT_STYLES = {
-  color: '#93C5FD',
-  fontStyle: 'italic',
-  fontSize: '1.2rem',
+  color: 'text.secondary',
+  fontSize: { xs: '1.1rem', md: '1.25rem' },
   fontWeight: 400,
-  maxWidth: '600px',
+  maxWidth: '700px',
   mx: 'auto',
   lineHeight: 1.6,
-  mb: 10
+  mb: 6,
+  opacity: 0.9
 };
 
-const QUOTE_STYLES = {
-  fontStyle: 'italic',
-  color: '#94A3B8', // A slightly lighter blue/gray
-  fontSize: { xs: '2.5rem', md: '3.5rem' },
-  letterSpacing: '0.02em',
-  fontWeight: 400,
-  opacity: 0.9,
-  mt: 8 // Push quote down more
+const CTA_WRAPPER_STYLES = { 
+  display: 'flex', 
+  gap: 2, 
+  justifyContent: 'center',
+  mt: 4
 };
 
 const Hero = () => {
@@ -86,37 +64,36 @@ const Hero = () => {
       <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
           {/* Centered Text Content */}
           <Grid item xs={12} md={10} lg={8} sx={{ textAlign: 'center', px: { md: 4 } }}>
-            <Typography variant="h6" sx={SUBTITLE_STYLES}>
-              
+            <Typography variant="h5" sx={SUBTITLE_STYLES}>
+              Next-Gen Infrastructure
             </Typography>
 
             <Typography variant="h1" sx={TITLE_STYLES}>
-              <br />
+              The Future of Fluid<br />Infrastructure
             </Typography>
 
-            <Typography variant="h4" sx={NAME_STYLES}>
-              
+            <Typography variant="body1" sx={DESCRIPTION_TEXT_STYLES}>
+              AetherFlow provides the high-performance backbone for the next generation of digital platforms. Scalable, secure, and entirely autonomous.
             </Typography>
 
-            <Button
-              onClick={() => scroller.scrollTo('contact', { duration: 500, smooth: 'easeInOutQuart', offset: -70 })}
-              variant="contained"
-              size="large"
-              sx={CONSULT_BUTTON_STYLES}
-              aria-label=""
-            >
-              
-            </Button>
-
-
-
-            <Typography variant="body1" sx={{ ...DESCRIPTION_TEXT_STYLES, mt: 4 }}>
-              
-            </Typography>
-
-            <Typography variant="h3" sx={QUOTE_STYLES}>
-              
-            </Typography>
+            <Box sx={CTA_WRAPPER_STYLES}>
+              <Button
+                onClick={() => scroller.scrollTo('features', { duration: 500, smooth: 'easeInOutQuart', offset: -70 })}
+                variant="contained"
+                size="large"
+                aria-label="Get Started"
+              >
+                Get Started
+              </Button>
+              <Button
+                onClick={() => scroller.scrollTo('infrastructure', { duration: 500, smooth: 'easeInOutQuart', offset: -70 })}
+                variant="outlined"
+                size="large"
+                aria-label="View Specs"
+              >
+                View Specs
+              </Button>
+            </Box>
 
           </Grid>
       </Container>
