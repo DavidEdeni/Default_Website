@@ -1,7 +1,6 @@
 import { memo } from 'react';
 import { Box, Container, Typography, Grid, List, ListItem, ListItemText, Link } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
-import { Element } from 'react-scroll';
+import { scroller, Element } from 'react-scroll';
 
 
 const SECTION_BOX_STYLES = { py: { xs: 12, md: 18 }, bgcolor: 'background.default' };
@@ -74,9 +73,24 @@ const AboutSection = () => {
 
               <Box sx={LINK_WRAPPER_STYLES}>
                 <Link
-                  component={RouterLink}
-                  to="/supervision-fit"
-                  sx={CTA_LINK_STYLES}
+                  component="button"
+                  onClick={() => {
+                    scroller.scrollTo('contact', {
+                      duration: 500,
+                      delay: 0,
+                      smooth: 'easeInOutQuart',
+                      offset: -70
+                    });
+                  }}
+                  sx={{
+                    ...CTA_LINK_STYLES,
+                    cursor: 'pointer',
+                    bgcolor: 'transparent',
+                    p: 0,
+                    border: 'none',
+                    borderBottom: CTA_LINK_STYLES.borderBottom,
+                    display: 'inline-block'
+                  }}
                   aria-label="Request a Supervision Fit Consultation"
                 >
                   Request a Supervision Fit Consult +
