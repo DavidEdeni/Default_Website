@@ -1,109 +1,113 @@
 import { memo } from 'react';
-import { Box, Container, Typography, Grid, Button, List, ListItem, ListItemText } from '@mui/material';
+import { Box, Container, Typography, Grid, Button } from '@mui/material';
 import { scroller } from 'react-scroll';
 
-const START_HERE_SECTION_STYLES = {
-  bgcolor: 'primary.main',
-  color: 'primary.contrastText',
-  py: { xs: 12, md: 18 }
+const LIFECYCLE_SECTION_STYLES = {
+  bgcolor: '#05070A',
+  color: 'text.primary',
+  py: { xs: 15, md: 20 },
+  position: 'relative'
 };
 
 
 const TITLE_STYLES = {
   fontSize: { xs: '2.5rem', md: '3.5rem' },
-  mb: 4,
+  fontWeight: 800,
+  mb: 6,
   position: 'relative',
-  '&:after': {
+};
+
+const STEP_BOX_STYLES = {
+  position: 'relative',
+  pl: 6,
+  pb: 8,
+  '&:last-child': { pb: 0 },
+  '&:before': {
     content: '""',
     position: 'absolute',
-    bottom: -10,
-    left: 0,
-    width: 60,
-    height: 1,
-    bgcolor: 'secondary.light',
-    opacity: 0.5
+    left: '23px',
+    top: '48px',
+    bottom: 0,
+    width: '2px',
+    background: 'linear-gradient(to bottom, #06B6D4 0%, transparent 100%)',
+    opacity: 0.2
   }
 };
 
-const BODY_TEXT_STYLES = {
-  fontSize: '1.2rem',
-  mb: 4,
-  opacity: 0.9,
-  lineHeight: 1.8,
-  fontWeight: 300
-};
-
-const BULLET_POINT_STYLES = {
-  mb: 2,
-  '& .MuiTypography-root': {
-    fontSize: '1.1rem',
-    fontWeight: 300,
-    opacity: 0.8
-  }
+const STEP_NUMBER_STYLES = {
+  position: 'absolute',
+  left: 0,
+  top: 0,
+  width: 48,
+  height: 48,
+  borderRadius: '50%',
+  bgcolor: 'rgba(6, 182, 212, 0.1)',
+  border: '1px solid rgba(6, 182, 212, 0.3)',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  color: '#06B6D4',
+  fontWeight: 800,
+  fontSize: '0.875rem'
 };
 
 const CTA_BUTTON_STYLES = {
-  mt: 8,
-  bgcolor: 'background.default',
-  color: 'primary.main',
-  '&:hover': {
-    bgcolor: '#FFF',
-    transform: 'translateY(-2px)'
-  },
-  fontSize: '0.9rem',
-  letterSpacing: '0.15em',
-  px: 6,
-  py: 2
+  mt: 4,
+  px: 4,
+  py: 1.5,
+  fontSize: '0.875rem'
 };
 
 const StartHere = () => {
   return (
-    <Box component="section" sx={START_HERE_SECTION_STYLES}>
+    <Box component="section" id="lifecycle" sx={LIFECYCLE_SECTION_STYLES}>
       <Container maxWidth="lg">
         <Grid container spacing={10} justifyContent="center">
           <Grid item xs={12} md={10} lg={8}>
+            <Typography variant="h5" sx={{ mb: 2, color: 'primary.main' }}>
+              Process
+            </Typography>
             <Typography variant="h2" sx={TITLE_STYLES}>
-              
+              Aether Implementation Lifecycle
             </Typography>
             
-            <Typography variant="body1" sx={BODY_TEXT_STYLES}>
-              
-            </Typography>
-
-            <Typography variant="h6" sx={{ mb: 3, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'secondary.light', fontSize: '0.85rem' }}>
-              
-            </Typography>
-
-            <List sx={{ mb: 4 }}>
+            <Box>
               {[
-                "",
-                "",
-                "",
-                ""
-              ].map((item, idx) => (
-                <ListItem key={idx} disableGutters sx={BULLET_POINT_STYLES}>
-                  <ListItemText primary={item} />
-                </ListItem>
+                {
+                  title: "Architecture Design",
+                  desc: "Define your node topology and security boundaries with our visual architect and AI validation engine."
+                },
+                {
+                  title: "Shadow Deployment",
+                  desc: "Validate performance and security in a parallel environment without impacting production traffic."
+                },
+                {
+                  title: "Autonomous Core Activation",
+                  desc: "Transition to a fully managed, self-healing core that adapts to your global traffic patterns."
+                }
+              ].map((step, idx) => (
+                <Box key={idx} sx={STEP_BOX_STYLES}>
+                  <Box sx={STEP_NUMBER_STYLES}>0{idx + 1}</Box>
+                  <Typography variant="h3" sx={{ fontSize: '1.5rem', mb: 1.5 }}>
+                    {step.title}
+                  </Typography>
+                  <Typography variant="body1" sx={{ maxWidth: '600px' }}>
+                    {step.desc}
+                  </Typography>
+                  {idx === 2 && (
+                    <Button
+                      onClick={() => scroller.scrollTo('contact', { duration: 500, smooth: 'easeInOutQuart', offset: -70 })}
+                      variant="contained"
+                      sx={CTA_BUTTON_STYLES}
+                      aria-label="Start Implementation"
+                    >
+                      Start Implementation
+                    </Button>
+                  )}
+                </Box>
               ))}
-            </List>
-
-            <Button
-              onClick={() => {
-                scroller.scrollTo('contact', {
-                  duration: 500,
-                  delay: 0,
-                  smooth: 'easeInOutQuart',
-                  offset: -70
-                });
-              }}
-              variant="contained"
-              sx={CTA_BUTTON_STYLES}
-              aria-label=""
-            >
-              
-            </Button>
+            </Box>
           </Grid>
-          
         </Grid>
       </Container>
     </Box>

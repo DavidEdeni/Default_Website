@@ -1,64 +1,69 @@
 import { memo } from 'react';
-import { Box, Container, Typography, Grid, Divider } from '@mui/material';
+import { Box, Container, Typography, Grid } from '@mui/material';
 import { Element } from 'react-scroll';
 
-const services = [
+const solutions = [
   {
-    title: '',
-    description: '',
-    status: '',
-    isPrimary: true
+    title: 'Aether Cloud',
+    description: 'High-fidelity cloud orchestration designed for mission-critical applications requiring sub-millisecond latency.',
+    tag: 'Infrastructure'
   },
   {
-    title: '',
-    description: '',
-    status: '',
-    isPrimary: false
+    title: 'Quantum Core',
+    description: 'Hardware-level security protocols that remain resilient against next-generation cryptographic threats.',
+    tag: 'Security'
   },
   {
-    title: '',
-    description: '',
-    status: '',
-    isPrimary: false
+    title: 'Neural Mesh',
+    description: 'A distributed artificial intelligence fabric that synchronizes intelligence across billions of edge nodes.',
+    tag: 'Intelligence'
   }
 ];
 
-const SERVICE_PAPER_STYLES = () => ({
-  p: { xs: 4, md: 6 },
+const SOLUTION_CARD_STYLES = {
+  p: { xs: 6, md: 8 },
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
-  textAlign: 'center',
-  border: 'none',
-  bgcolor: 'transparent',
-  transition: 'all 0.3s ease'
-});
+  textAlign: 'left',
+  border: '1px solid rgba(255, 255, 255, 0.05)',
+  background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0) 100%)',
+  borderRadius: '24px',
+  transition: 'all 0.4s ease',
+  '&:hover': {
+    borderColor: 'rgba(6, 182, 212, 0.3)',
+    background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.1) 100%)',
+    transform: 'scale(1.02)'
+  }
+};
 
 const Services = () => {
   return (
-    <Box component="section" sx={{ py: { xs: 12, md: 18 }, bgcolor: 'background.default' }}>
-      <Element name="services" id="services">
+    <Box component="section" sx={{ py: { xs: 15, md: 20 }, bgcolor: '#05070A' }}>
+      <Element name="solutions" id="solutions">
         <Container maxWidth="lg">
-          <Typography variant="h2" align="center" sx={{ mb: 10, position: 'relative' }}>
-            
+          <Typography variant="h5" sx={{ mb: 2, color: 'primary.main', textAlign: 'left' }}>
+            Solutions
           </Typography>
-          <Grid container spacing={6} justifyContent="center">
-            {services.map((service, index) => (
-              <Grid item xs={12} md={8} lg={6} key={index}>
+          <Typography variant="h2" sx={{ mb: 10, maxWidth: '600px', textAlign: 'left' }}>
+            Enterprise-Grade Systems for Global Operations
+          </Typography>
+          <Grid container spacing={6}>
+            {solutions.map((solution, index) => (
+              <Grid item xs={12} lg={4} key={index}>
                 <Box
-                  sx={SERVICE_PAPER_STYLES()}
+                  sx={SOLUTION_CARD_STYLES}
                 >
-                  <Typography variant="h3" gutterBottom sx={{ fontSize: '1.75rem', fontWeight: 500, mb: 3 }}>
-                    {service.title}
+                  <Typography variant="overline" sx={{ color: 'primary.main', fontWeight: 800, mb: 2, display: 'block' }}>
+                    {solution.tag}
                   </Typography>
-                  <Typography variant="body1" sx={{ mb: 4, color: 'text.secondary', maxWidth: '500px', mx: 'auto' }}>
-                    {service.description}
+                  <Typography variant="h3" sx={{ mb: 3 }}>
+                    {solution.title}
                   </Typography>
-                  
+                  <Typography variant="body1" sx={{ color: 'text.secondary' }}>
+                    {solution.description}
+                  </Typography>
                 </Box>
-                {index < services.length - 1 && (
-                  <Divider sx={{ my: 6, opacity: 0.1, maxWidth: '200px', mx: 'auto' }} />
-                )}
               </Grid>
             ))}
           </Grid>

@@ -3,100 +3,55 @@ import { Box, Container, Typography, Grid, List, ListItem, ListItemText, Link } 
 import { scroller, Element } from 'react-scroll';
 
 
-const SECTION_BOX_STYLES = { py: { xs: 12, md: 18 }, bgcolor: 'background.default' };
-const HEADER_TITLE_STYLES = { mb: 8, position: 'relative' };
-const SUBHEADER_TITLE_STYLES = { fontSize: '1.25rem', fontWeight: 600, mb: 3, letterSpacing: '0.05em', textTransform: 'uppercase' };
-const ITEM_TEXT_STYLES = { py: 0.75 };
-const ITALIC_TEXT_STYLES = { mt: 4, fontStyle: 'italic', color: 'text.secondary', fontWeight: 300 };
-const LINK_WRAPPER_STYLES = { mt: 6 };
-const CTA_LINK_STYLES = {
-  fontSize: '0.85rem',
-  fontWeight: 600,
-  color: 'primary.main',
-  textDecoration: 'none',
-  textTransform: 'uppercase',
-  letterSpacing: '0.1em',
-  borderBottom: '1px solid',
-  borderColor: 'rgba(45, 41, 38, 0.3)',
-  pb: 0.5,
-  transition: 'all 0.3s ease',
-  '&:hover': { borderColor: 'primary.main' }
+const SECTION_BOX_STYLES = { py: { xs: 15, md: 20 }, bgcolor: '#05070A' };
+const METRIC_CARD_STYLES = {
+  p: 4,
+  textAlign: 'center',
+  background: 'rgba(15, 23, 42, 0.3)',
+  borderRadius: '20px',
+  border: '1px solid rgba(255, 255, 255, 0.03)',
+};
+const NUMBER_STYLES = {
+  fontSize: '3.5rem',
+  fontWeight: 800,
+  background: 'linear-gradient(135deg, #06B6D4 0%, #8B5CF6 100%)',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  mb: 1
 };
 
 const AboutSection = () => {
   return (
     <Box component="section" sx={SECTION_BOX_STYLES}>
-      <Element name="about" id="about">
+      <Element name="infrastructure" id="infrastructure">
         <Container maxWidth="lg">
-          <Typography variant="h2" align="center" gutterBottom sx={HEADER_TITLE_STYLES}>
-            
+          <Typography variant="h5" align="center" sx={{ mb: 2, color: 'primary.main' }}>
+            Infrastructure
           </Typography>
-          <Grid container spacing={8} justifyContent="center">
-            <Grid item xs={12} md={10} lg={8}>
-              <Typography variant="h3" gutterBottom sx={SUBHEADER_TITLE_STYLES}>
-                
-              </Typography>
-              <List sx={{ mb: 4 }}>
-                {[
-                  "",
-                  "",
-                  "",
-                  "",
-                  ""
-                ].map((item, idx) => (
-                  <ListItem key={idx} disableGutters sx={ITEM_TEXT_STYLES}>
-                    <ListItemText primary={<Typography variant="body1" color="text.secondary">{item}</Typography>} />
-                  </ListItem>
-                ))}
-              </List>
-
-              <Typography variant="h3" gutterBottom sx={SUBHEADER_TITLE_STYLES}>
-                
-              </Typography>
-              <List sx={{ mb: 4 }}>
-                {[
-                  "",
-                  "",
-                  "",
-                  "",
-                  ""
-                ].map((item, idx) => (
-                  <ListItem key={idx} disableGutters sx={ITEM_TEXT_STYLES}>
-                    <ListItemText primary={<Typography variant="body1" color="text.secondary">{item}</Typography>} />
-                  </ListItem>
-                ))}
-              </List>
-
-              <Typography variant="body1" sx={ITALIC_TEXT_STYLES}>
-                
-              </Typography>
-
-              <Box sx={LINK_WRAPPER_STYLES}>
-                <Link
-                  component="button"
-                  onClick={() => {
-                    scroller.scrollTo('contact', {
-                      duration: 500,
-                      delay: 0,
-                      smooth: 'easeInOutQuart',
-                      offset: -70
-                    });
-                  }}
-                  sx={{
-                    ...CTA_LINK_STYLES,
-                    cursor: 'pointer',
-                    bgcolor: 'transparent',
-                    p: 0,
-                    border: 'none',
-                    borderBottom: CTA_LINK_STYLES.borderBottom,
-                    display: 'inline-block'
-                  }}
-                  aria-label=""
-                >
-                  
-                </Link>
-              </Box>
-            </Grid>
+          <Typography variant="h2" align="center" sx={{ mb: 10 }}>
+            Massive Scale. Atomic Precision.
+          </Typography>
+          <Grid container spacing={4}>
+            {[
+              { label: "Availability", value: "99.999%", desc: "Global uptime across 64 edge regions." },
+              { label: "Latency", value: "< 1ms", desc: "For distributed Aether Cloud operations." },
+              { label: "Throughput", value: "10M+", desc: "Operations per second across the mesh." },
+              { label: "Egress Cost", value: "$0.00", desc: "For all internal Aether-to-Aether traffic." }
+            ].map((metric, idx) => (
+              <Grid item xs={12} sm={6} md={3} key={idx}>
+                <Box sx={METRIC_CARD_STYLES}>
+                  <Typography variant="h3" sx={NUMBER_STYLES}>
+                    {metric.value}
+                  </Typography>
+                  <Typography variant="h5" sx={{ mb: 1, color: 'text.primary', fontSize: '0.9rem' }}>
+                    {metric.label}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', opacity: 0.7 }}>
+                    {metric.desc}
+                  </Typography>
+                </Box>
+              </Grid>
+            ))}
           </Grid>
         </Container>
       </Element>
