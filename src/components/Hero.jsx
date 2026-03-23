@@ -4,7 +4,7 @@ import { scroller } from 'react-scroll';
 
 
 const HERO_SECTION_STYLES = {
-  bgcolor: '#05070A',
+  bgcolor: 'transparent',
   color: 'text.primary',
   pt: { xs: 15, md: 25 },
   pb: { xs: 12, md: 20 },
@@ -13,7 +13,7 @@ const HERO_SECTION_STYLES = {
   alignItems: 'center',
   position: 'relative',
   overflow: 'hidden',
-  background: 'radial-gradient(circle at 20% 30%, rgba(6, 182, 212, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 50%), #05070A',
+  background: 'radial-gradient(circle at 20% 30%, rgba(6, 182, 212, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.15) 0%, transparent 50%), transparent',
 };
 
 
@@ -32,7 +32,7 @@ const TITLE_STYLES = {
   fontWeight: 800,
   mb: 3,
   lineHeight: 1,
-  background: 'linear-gradient(to bottom, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 100%)',
+  background: 'linear-gradient(to bottom, #0F172A 0%, rgba(15, 23, 42, 0.7) 100%)',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   maxWidth: '900px',

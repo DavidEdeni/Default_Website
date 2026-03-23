@@ -3,7 +3,7 @@ import { Box, Container, Typography, Grid } from '@mui/material';
 
 const SECTION_WRAPPER_STYLES = { 
   py: { xs: 15, md: 20 }, 
-  bgcolor: '#05070A',
+  bgcolor: 'transparent',
   position: 'relative'
 };
 
@@ -14,14 +14,15 @@ const FEATURE_CARD_STYLES = {
   flexDirection: 'column',
   gap: 2,
   transition: 'all 0.3s ease',
-  background: 'rgba(15, 23, 42, 0.4)',
+  background: 'rgba(255, 255, 255, 0.6)',
   backdropFilter: 'blur(10px)',
-  border: '1px solid rgba(255, 255, 255, 0.03)',
+  border: '1px solid rgba(15, 23, 42, 0.08)',
+  boxShadow: '0 4px 20px rgba(0,0,0,0.02)',
   '&:hover': {
-    background: 'rgba(15, 23, 42, 0.6)',
-    borderColor: 'rgba(6, 182, 212, 0.2)',
+    background: 'rgba(255, 255, 255, 0.9)',
+    borderColor: 'rgba(6, 182, 212, 0.4)',
     transform: 'translateY(-4px)',
-    boxShadow: '0 20px 40px rgba(0, 0, 0, 0.4)'
+    boxShadow: '0 20px 40px rgba(15, 23, 42, 0.1)'
   }
 };
 

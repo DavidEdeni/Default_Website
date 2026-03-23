@@ -3,13 +3,14 @@ import { Box, Container, Typography, Grid } from '@mui/material';
 import { Element } from 'react-scroll';
 
 
-const SECTION_BOX_STYLES = { py: { xs: 15, md: 20 }, bgcolor: '#05070A' };
+const SECTION_BOX_STYLES = { py: { xs: 15, md: 20 }, bgcolor: 'transparent' };
 const METRIC_CARD_STYLES = {
   p: 4,
   textAlign: 'center',
-  background: 'rgba(15, 23, 42, 0.3)',
+  background: 'rgba(255, 255, 255, 0.5)',
   borderRadius: '20px',
-  border: '1px solid rgba(255, 255, 255, 0.03)',
+  border: '1px solid rgba(15, 23, 42, 0.08)',
+  boxShadow: '0 4px 20px rgba(0,0,0,0.02)',
 };
 const NUMBER_STYLES = {
   fontSize: '3.5rem',

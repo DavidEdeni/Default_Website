@@ -26,20 +26,22 @@ const SOLUTION_CARD_STYLES = {
   display: 'flex',
   flexDirection: 'column',
   textAlign: 'left',
-  border: '1px solid rgba(255, 255, 255, 0.05)',
-  background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0) 100%)',
+  border: '1px solid rgba(15, 23, 42, 0.08)',
+  background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%)',
   borderRadius: '24px',
   transition: 'all 0.4s ease',
+  boxShadow: '0 4px 20px rgba(0,0,0,0.02)',
   '&:hover': {
-    borderColor: 'rgba(6, 182, 212, 0.3)',
-    background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.1) 100%)',
-    transform: 'scale(1.02)'
+    borderColor: 'rgba(6, 182, 212, 0.4)',
+    background: 'linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 100%)',
+    transform: 'scale(1.02)',
+    boxShadow: '0 12px 30px rgba(0,0,0,0.06)'
   }
 };
 
 const Services = () => {
   return (
-    <Box component="section" sx={{ py: { xs: 15, md: 20 }, bgcolor: '#05070A' }}>
+    <Box component="section" sx={{ py: { xs: 15, md: 20 }, bgcolor: 'transparent' }}>
       <Element name="solutions" id="solutions">
         <Container maxWidth="lg">
           <Typography variant="h5" sx={{ mb: 2, color: 'primary.main', textAlign: 'left' }}>
