@@ -9,7 +9,7 @@ import VideocamOffIcon from '@mui/icons-material/VideocamOff';
 
 export default function ParticleScene() {
   const [preset, setPreset] = useState('sphere');
-  const [color, setColor] = useState('#3C2F2F');
+  const [color, setColor] = useState('#06B6D4');
   const [showVideo, setShowVideo] = useState(false);
   const { tension, isDetecting, videoRef } = useHandTracking();
 

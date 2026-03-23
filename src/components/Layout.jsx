@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 
 const Layout = ({ children }) => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: '#05070A' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: 'transparent' }}>
       <Header />
       <Box component="main" sx={{ flexGrow: 1 }}>
         {children}

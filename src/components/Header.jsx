@@ -4,9 +4,10 @@ import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 
 const HEADER_STYLES = { 
-  background: 'rgba(5, 7, 10, 0.7)',
-  borderBottom: '1px solid rgba(255, 255, 255, 0.05)', 
+  background: 'rgba(255, 255, 255, 0.8)',
+  borderBottom: '1px solid rgba(15, 23, 42, 0.05)', 
   backdropFilter: 'blur(20px)',
+  boxShadow: '0 4px 30px rgba(0,0,0,0.03)',
   zIndex: 1100,
 };
 
@@ -40,7 +41,7 @@ const NAV_BOX_STYLES = {
 };
 
 const NAV_ITEM_STYLES = {
-  color: 'rgba(248, 250, 252, 0.7)',
+  color: 'rgba(15, 23, 42, 0.7)',
   fontSize: '0.875rem',
   fontWeight: 500,
   textTransform: 'none',

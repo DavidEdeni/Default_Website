@@ -3,7 +3,7 @@ import { Box, Container, Typography, Grid, Button } from '@mui/material';
 import { scroller } from 'react-scroll';
 
 const LIFECYCLE_SECTION_STYLES = {
-  bgcolor: '#05070A',
+  bgcolor: 'transparent',
   color: 'text.primary',
   py: { xs: 15, md: 20 },
   position: 'relative'

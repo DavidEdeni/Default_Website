@@ -24,11 +24,11 @@ const Footer = () => {
       component="footer"
       id="contact"
       sx={{
-        bgcolor: '#05070A',
+        bgcolor: 'transparent',
         pt: 12,
         pb: 8,
-        borderTop: '1px solid rgba(255, 255, 255, 0.05)',
-        color: '#F8FAFC',
+        borderTop: '1px solid rgba(15, 23, 42, 0.05)',
+        color: 'text.primary',
         position: 'relative',
         overflow: 'hidden'
       }}
@@ -127,7 +127,7 @@ const Footer = () => {
           </Grid>
         </Grid>
 
-        <Divider sx={{ borderColor: 'rgba(255, 255, 255, 0.05)', mb: 4 }} />
+        <Divider sx={{ borderColor: 'rgba(15, 23, 42, 0.08)', mb: 4 }} />
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', alignItems: 'center', gap: 2 }}>
           <Typography variant="body2" sx={{ color: 'text.secondary', opacity: 0.5, fontSize: '0.75rem' }}>
